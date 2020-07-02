@@ -1,0 +1,37 @@
+\hypertarget{struct_i2_c___config___s}{}\doxysection{I2\+C\+\_\+\+Config\+\_\+S Struct Reference}
+\label{struct_i2_c___config___s}\index{I2C\_Config\_S@{I2C\_Config\_S}}
+
+
+This Struct is used to initialize the I2C Module , by passing a pointer to a struct of this type to the init function .  
+
+
+
+
+{\ttfamily \#include $<$pic\+\_\+i2c.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_i2_c___config___s_afcd88efd70052c9e04d1ead66e348997}\label{struct_i2_c___config___s_afcd88efd70052c9e04d1ead66e348997}} 
+\mbox{\hyperlink{pic__i2c_8h_a1b2c77534bec1727e8497b3df1a16820}{I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+ET}} \mbox{\hyperlink{struct_i2_c___config___s_afcd88efd70052c9e04d1ead66e348997}{I2\+C\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em I2C Mode Used . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_i2_c___config___s_ac470e051f7bca35e6fdc046f569771f2}\label{struct_i2_c___config___s_ac470e051f7bca35e6fdc046f569771f2}} 
+uint8\+\_\+t \mbox{\hyperlink{struct_i2_c___config___s_ac470e051f7bca35e6fdc046f569771f2}{sla7\+\_\+addr}}
+\begin{DoxyCompactList}\small\item\em Slave Mode 7-\/Bit Addresss (ignored if I2\+C\+\_\+mode is Master Mode ). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_i2_c___config___s_acb27ce189c82b3845754bc6b538536bd}\label{struct_i2_c___config___s_acb27ce189c82b3845754bc6b538536bd}} 
+uint16\+\_\+t \mbox{\hyperlink{struct_i2_c___config___s_acb27ce189c82b3845754bc6b538536bd}{sla10\+\_\+addr}}
+\begin{DoxyCompactList}\small\item\em Slave Mode 10-\/Bit Addresss (ignored if I2\+C\+\_\+mode is Master Mode ). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_i2_c___config___s_a9f4862c4ad100a9e2b23f02a2b8af806}\label{struct_i2_c___config___s_a9f4862c4ad100a9e2b23f02a2b8af806}} 
+uint32\+\_\+t \mbox{\hyperlink{struct_i2_c___config___s_a9f4862c4ad100a9e2b23f02a2b8af806}{I2\+C\+\_\+freq}}
+\begin{DoxyCompactList}\small\item\em I2C Baud Rate(Shouldn\textquotesingle{}t Exceed 1M\+HZ) ( ignored if I2\+C\+\_\+mode is Slave Mode or Firmware Mode ). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_i2_c___config___s_ae8ae428f3892670953d263b4b77e3fc6}\label{struct_i2_c___config___s_ae8ae428f3892670953d263b4b77e3fc6}} 
+uint8\+\_\+t \mbox{\hyperlink{struct_i2_c___config___s_ae8ae428f3892670953d263b4b77e3fc6}{I2\+C\+\_\+\+Int\+\_\+\+Enable}}
+\begin{DoxyCompactList}\small\item\em Set it to anything but zero to enable Interrupts of M\+S\+SP Module during init , zero to disable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Struct is used to initialize the I2C Module , by passing a pointer to a struct of this type to the init function . 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/incl/\mbox{\hyperlink{pic__i2c_8h}{pic\+\_\+i2c.\+h}}\end{DoxyCompactItemize}

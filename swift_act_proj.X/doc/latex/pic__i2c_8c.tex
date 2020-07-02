@@ -1,0 +1,141 @@
+\hypertarget{pic__i2c_8c}{}\doxysection{Drivers/src/pic\+\_\+i2c.c File Reference}
+\label{pic__i2c_8c}\index{Drivers/src/pic\_i2c.c@{Drivers/src/pic\_i2c.c}}
+{\ttfamily \#include \char`\"{}../incl/pic\+\_\+i2c.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{pic__i2c_8c_a6ee5d3c616b1e5809c172ae1a4929cb3}{I2\+C\+\_\+\+Init}} (\mbox{\hyperlink{struct_i2_c___config___s}{I2\+C\+\_\+\+Config\+\_\+S}} $\ast$i2ch)
+\begin{DoxyCompactList}\small\item\em This Function Initializes the I2C Module within the P\+I\+C16\+F877A ,. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Blocks until the i2c bus is idle again . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__i2c_8c_a32e58d55017fc54118e3b7a5eda44d8c}{I2\+C\+\_\+\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Sends a Start Condition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__i2c_8c_afce134e0a1b6a8bc503c97b37639c9e6}{I2\+C\+\_\+\+Stop}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Sends a Stop Condition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__i2c_8c_a1d6de1448bffd94ee88376eeca084668}{I2\+C\+\_\+\+Restart}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Sends a Repeated Start Condition \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{pic__i2c_8c_af4d1380680e16e697618ef26474c45de}{I2\+C\+\_\+\+Transmit}} (uint8\+\_\+t bval)
+\begin{DoxyCompactList}\small\item\em \+: Transmits a Byte and returns received ack bit \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{pic__i2c_8c_a61b9bd39a73612da8399e9e66c47d3ad}{I2\+C\+\_\+\+Receive\+\_\+\+A\+CK}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Receives a byte via I2C and returns A\+CK in Response \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{pic__i2c_8c_ae0fcc992773db1b16786c45a256e003a}{I2\+C\+\_\+\+Receive\+\_\+\+N\+A\+CK}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Receives a byte via I2C and returns N\+A\+CK in Response \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Author \+: Mohamed Yousry Mohamed Rashad Date \+: 7/2/2020 This File , Contains I2C Communication Routines for the P\+I\+C16\+F877A , It contains the Implementations for \+:
+\begin{DoxyEnumerate}
+\item an Init Function ,
+\item a Master Transmit Function ,
+\item a Master Receive with A\+CK Function ,
+\item a Master Receive with N\+A\+CK Function ,
+
+This routines here are mainly used by the 24C04 E\+E\+P\+R\+OM Functions in \mbox{\hyperlink{eep_8c}{eep.\+c}} This Driver Doesn\textquotesingle{}t Implement Slave Mode or Firmware mode as they are not required by the electric heater project . File\+\_\+\+Name \+: \mbox{\hyperlink{pic__i2c_8c}{pic\+\_\+i2c.\+c}} Related\+\_\+\+Header \+: \mbox{\hyperlink{pic__i2c_8h}{pic\+\_\+i2c.\+h}} ~\newline
+ 
+\end{DoxyEnumerate}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}\label{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Halt@{I2C\_Halt}}
+\index{I2C\_Halt@{I2C\_Halt}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Halt()}{I2C\_Halt()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Halt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Blocks until the i2c bus is idle again . 
+
+This Function is used to Block(halt) execution until the i2c bus is idle . Functions using the I2C Module for Transmit/\+Receive Should Call this Function Before taking an action on the bus to ensure that the bus is idle beforehand. This function is blocking. \mbox{\Hypertarget{pic__i2c_8c_a6ee5d3c616b1e5809c172ae1a4929cb3}\label{pic__i2c_8c_a6ee5d3c616b1e5809c172ae1a4929cb3}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Init@{I2C\_Init}}
+\index{I2C\_Init@{I2C\_Init}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Init()}{I2C\_Init()}}
+{\footnotesize\ttfamily int8\+\_\+t I2\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___config___s}{I2\+C\+\_\+\+Config\+\_\+S}} $\ast$}]{i2ch }\end{DoxyParamCaption})}
+
+
+
+This Function Initializes the I2C Module within the P\+I\+C16\+F877A ,. 
+
+\+: Initializes I2C Module , Using a Pointer to a Configuration Struct
+
+
+\begin{DoxyParams}{Parameters}
+{\em i2ch} & \+: Pointer to an I2C Configuration Struct used to Initialize the I2C Module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 if successful returns -\/1 if there is an assertion problem if D\+E\+B\+U\+G\+\_\+\+M\+O\+DE is defined 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__i2c_8c_a61b9bd39a73612da8399e9e66c47d3ad}\label{pic__i2c_8c_a61b9bd39a73612da8399e9e66c47d3ad}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Receive\_ACK@{I2C\_Receive\_ACK}}
+\index{I2C\_Receive\_ACK@{I2C\_Receive\_ACK}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Receive\_ACK()}{I2C\_Receive\_ACK()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+\+Receive\+\_\+\+A\+CK (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Receives a byte via I2C and returns A\+CK in Response 
+
+This Function performs a (Master Receive) Operation and gets a byte from the I2C Bus , it returns an A\+C\+K(\+A\+C\+K\+N\+O\+W\+L\+E\+D\+G\+E) as a response to the byte received . This Function uses \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt()}} so it is blocking . \begin{DoxyReturn}{Returns}
+returns the byte received from the I2C Bus . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__i2c_8c_ae0fcc992773db1b16786c45a256e003a}\label{pic__i2c_8c_ae0fcc992773db1b16786c45a256e003a}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Receive\_NACK@{I2C\_Receive\_NACK}}
+\index{I2C\_Receive\_NACK@{I2C\_Receive\_NACK}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Receive\_NACK()}{I2C\_Receive\_NACK()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+\+Receive\+\_\+\+N\+A\+CK (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Receives a byte via I2C and returns N\+A\+CK in Response 
+
+This Function performs a (Master Receive) Operation and gets a byte from the I2C Bus , it returns a N\+A\+C\+K( N\+O\+T A\+C\+K\+N\+O\+W\+L\+E\+D\+G\+E) as a response to the byte received . This Function uses \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt()}} so it is blocking . \begin{DoxyReturn}{Returns}
+returns the byte received from the I2C Bus . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__i2c_8c_a1d6de1448bffd94ee88376eeca084668}\label{pic__i2c_8c_a1d6de1448bffd94ee88376eeca084668}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Restart@{I2C\_Restart}}
+\index{I2C\_Restart@{I2C\_Restart}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Restart()}{I2C\_Restart()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Restart (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Sends a Repeated Start Condition 
+
+This Function will send a repeated start condition on the i2c bus , it uses \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt()}} This function is blocking. \mbox{\Hypertarget{pic__i2c_8c_a32e58d55017fc54118e3b7a5eda44d8c}\label{pic__i2c_8c_a32e58d55017fc54118e3b7a5eda44d8c}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Start@{I2C\_Start}}
+\index{I2C\_Start@{I2C\_Start}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Start()}{I2C\_Start()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Sends a Start Condition 
+
+This Function will send a start condition on the i2c bus , it uses \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt()}} This function is blocking. \mbox{\Hypertarget{pic__i2c_8c_afce134e0a1b6a8bc503c97b37639c9e6}\label{pic__i2c_8c_afce134e0a1b6a8bc503c97b37639c9e6}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Stop@{I2C\_Stop}}
+\index{I2C\_Stop@{I2C\_Stop}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Stop()}{I2C\_Stop()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Sends a Stop Condition 
+
+This Function will send a stop condition on the i2c bus , it uses \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt()}} This function is blocking. \mbox{\Hypertarget{pic__i2c_8c_af4d1380680e16e697618ef26474c45de}\label{pic__i2c_8c_af4d1380680e16e697618ef26474c45de}} 
+\index{pic\_i2c.c@{pic\_i2c.c}!I2C\_Transmit@{I2C\_Transmit}}
+\index{I2C\_Transmit@{I2C\_Transmit}!pic\_i2c.c@{pic\_i2c.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Transmit()}{I2C\_Transmit()}}
+{\footnotesize\ttfamily int8\+\_\+t I2\+C\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bval }\end{DoxyParamCaption})}
+
+
+
+\+: Transmits a Byte and returns received ack bit 
+
+This Function Transmits a single byte on the I2C Bus , it uses \mbox{\hyperlink{pic__i2c_8c_a0c259e497c830385b0f1811b64b5cd66}{I2\+C\+\_\+\+Halt()}} so it is blocking . 
+\begin{DoxyParams}{Parameters}
+{\em bval} & \+: byte to be transmitted on the I2C Bus . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 1 if the device returned N\+AK , returns 0 if device responded with ack . 
+\end{DoxyReturn}

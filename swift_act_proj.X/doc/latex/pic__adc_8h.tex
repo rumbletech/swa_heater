@@ -1,0 +1,328 @@
+\hypertarget{pic__adc_8h}{}\doxysection{Drivers/incl/pic\+\_\+adc.h File Reference}
+\label{pic__adc_8h}\index{Drivers/incl/pic\_adc.h@{Drivers/incl/pic\_adc.h}}
+{\ttfamily \#include \char`\"{}../../config/pconfig.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}}
+\begin{DoxyCompactList}\small\item\em This Struct Contains Configuration Information for the A\+DC Module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pic__adc_8h_ad745e6e655be3ca2918c61483b9348bd}\label{pic__adc_8h_ad745e6e655be3ca2918c61483b9348bd}} 
+\#define {\bfseries P\+I\+C\+\_\+\+A\+D\+C\+\_\+\+T\+O\+K\+EN}~1UL
+\item 
+\mbox{\Hypertarget{pic__adc_8h_ada9f09bbee2e15c2069f4c25ec74bed8}\label{pic__adc_8h_ada9f09bbee2e15c2069f4c25ec74bed8}} 
+\#define {\bfseries A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+LS}~8UL
+\item 
+\#define \mbox{\hyperlink{pic__adc_8h_a0b1ae2deee91cdcca68324b74d1b99d5}{D\+I\+S\+A\+B\+L\+E\+\_\+\+A\+DC}}()~A\+D\+C\+O\+N0 \&= $\sim$ ( 1 $<$$<$ \+\_\+\+A\+D\+C\+O\+N0\+\_\+\+A\+D\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON )
+\item 
+\#define \mbox{\hyperlink{pic__adc_8h_abefc5d09efe63690a264133398c23ae8}{E\+N\+A\+B\+L\+E\+\_\+\+A\+DC}}()~A\+D\+C\+O\+N0 $\vert$= ( 1 $<$$<$ \+\_\+\+A\+D\+C\+O\+N0\+\_\+\+A\+D\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON  )
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pic__adc_8h_ac23d14c7df288ac2c42c6dbe2049e417}\label{pic__adc_8h_ac23d14c7df288ac2c42c6dbe2049e417}} 
+typedef struct \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} $\ast$ {\bfseries A\+D\+C\+\_\+\+Config\+\_\+\+SP}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+ET}} \{ \newline
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a1c6b8282b83f95c4924d76420b13f279}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V2}} = 0B000, 
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a9f648a642db9561a61a7e5b844d1b23a}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V8}} = 0B001, 
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a6d4be3d71e3571bc63725f4220062eeb}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V32}} = 0B010, 
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a46f1022b68ad17676be6670eb322851f}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+RC}} = 0B011, 
+\newline
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a85cab5c7fc271e051258801bf82639e1}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V4}} = 0B100, 
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4aa87f48073fb18db884430b927ee61410}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V16}} = 0B101, 
+\mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4aa361c7cd44779aa87b57eb4ac3f52a5e}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V64}} = 0B110
+ \}
+\item 
+enum \mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+ET}} \{ \newline
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a2bd99558a3c4e2a5e5963f676d9ffe74}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+80}} = 0B0000, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ad6b93574a283727c653aebc442ec235f}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+71}} = 0B0001, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6f9814e98dbc3a12376daf5d1938aa34}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+50}} = 0B0010, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a8441843647b4e99f4875529ece3069d4}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+41}} = 0B0011, 
+\newline
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ac93b7a2e8085354c0282f00ca2ded274}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+30}} = 0B0100, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a5aaac186f7c68c20c8801877aa93c377}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+21}} = 0B0101, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6cd3c93f59f5286d402d2fe6f9862db7}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+00}} = 0B0110, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ab26c953fa5c7989f4f5ebb250bf0f011}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+62}} = 0B1000, 
+\newline
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ab2623b5f20edf67ad6efbffca049e36a}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+60}} = 0B1001, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6d8134c694e0f275c0beb3e8fce35fc6}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+51}} = 0B1010, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ad3a3e763d57ba9124418e56eaf4a1b2f}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+42}} = 0B1011, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a2269de0e53c39c3f98379092d1d324e7}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+32}} = 0B1100, 
+\newline
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a917a1e566944157f7984074ca1a704cc}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+22}} = 0B1101, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a44403222aa155b889e812f4cdd1865d9}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+10}} = 0B1110, 
+\mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a212ef22667b91b6c40dc3d922c0356bc}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+12}} = 0B1111
+ \}
+\item 
+enum \mbox{\hyperlink{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2d}{A\+D\+C\+\_\+\+F\+M\+T\+S\+E\+L\+\_\+\+ET}} \{ \mbox{\hyperlink{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2da8387db00509d5081a796417d22f7a0f4}{A\+D\+C\+\_\+\+F\+M\+T\+\_\+\+R\+A\+DJ}} = 1, 
+\mbox{\hyperlink{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2da1733f91e2aa9b58dc83e78f904ec1964}{A\+D\+C\+\_\+\+F\+M\+T\+\_\+\+L\+A\+DJ}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em This Enum Contains Options for Right adjusted result format or left adjusted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{pic__adc_8h_a9e6caabcb406f811404966f09939778a}{A\+D\+C\+\_\+\+Get\+Flag}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the A\+DC Peripheral Flag bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8h_acb22dd4a372471e85e039300f3e36fb9}{A\+D\+C\+\_\+\+Clear\+Flag}} (void)
+\begin{DoxyCompactList}\small\item\em Clears A\+DC Conversion Complete Flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8h_ac00bd03ae337fdb744e6b71794d20011}{A\+D\+C\+\_\+\+Enable\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em Enables A\+DC Interrupts ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8h_af36bcc1c65abaa7e3be26a73722502d3}{A\+D\+C\+\_\+\+Disable\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em Disables A\+DC Interrupts. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{pic__adc_8h_acbe93874fa2bbb0ec317bcea3072d5b6}{A\+D\+C\+\_\+\+Init}} (\mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} $\ast$config\+\_\+s\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the A\+DC Peripheral using data contained in \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} Struct passed by reference. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{pic__adc_8h_a3ed3ca60bb577607da020df10abb3e94}{A\+D\+C\+\_\+\+Start\+Conv\+\_\+B}} (void)
+\begin{DoxyCompactList}\small\item\em Starts a Conversion and returns the result , this function is blocking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8h_a306095f6116a34dde552903d69c8617b}{A\+D\+C\+\_\+\+Start\+Conv\+\_\+\+NB}} (void)
+\begin{DoxyCompactList}\small\item\em Starts a Conversion and returns immediately , this function is non blocking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File\+: \mbox{\hyperlink{pic__adc_8h}{pic\+\_\+adc.\+h}} Author\+: Mohamed Yousry Mohamed
+
+Created on June 29, 2020, 6\+:57 PM
+
+Description \+: The File Includes A\+DC Module Definitions , Function Prototypes , and type definitions , for the P\+I\+C16\+F877A Microcontroller or similar Micro-\/controllers . 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pic__adc_8h_a0b1ae2deee91cdcca68324b74d1b99d5}\label{pic__adc_8h_a0b1ae2deee91cdcca68324b74d1b99d5}} 
+\index{pic\_adc.h@{pic\_adc.h}!DISABLE\_ADC@{DISABLE\_ADC}}
+\index{DISABLE\_ADC@{DISABLE\_ADC}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_ADC}{DISABLE\_ADC}}
+{\footnotesize\ttfamily \#define D\+I\+S\+A\+B\+L\+E\+\_\+\+A\+DC(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~A\+D\+C\+O\+N0 \&= $\sim$ ( 1 $<$$<$ \+\_\+\+A\+D\+C\+O\+N0\+\_\+\+A\+D\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON )}
+
+Disables the A\+DC Module \mbox{\Hypertarget{pic__adc_8h_abefc5d09efe63690a264133398c23ae8}\label{pic__adc_8h_abefc5d09efe63690a264133398c23ae8}} 
+\index{pic\_adc.h@{pic\_adc.h}!ENABLE\_ADC@{ENABLE\_ADC}}
+\index{ENABLE\_ADC@{ENABLE\_ADC}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_ADC}{ENABLE\_ADC}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+L\+E\+\_\+\+A\+DC(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~A\+D\+C\+O\+N0 $\vert$= ( 1 $<$$<$ \+\_\+\+A\+D\+C\+O\+N0\+\_\+\+A\+D\+O\+N\+\_\+\+P\+O\+S\+I\+T\+I\+ON  )}
+
+Enables the A\+DC Module 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_ET@{ADC\_CKSEL\_ET}}
+\index{ADC\_CKSEL\_ET@{ADC\_CKSEL\_ET}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_CKSEL\_ET}{ADC\_CKSEL\_ET}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4}{A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+ET}}}
+
+This Enum Contains Clock Selection Options for the A\+DC Module \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_DIV2@{ADC\_CKSEL\_FOSC\_DIV2}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_DIV2@{ADC\_CKSEL\_FOSC\_DIV2}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a1c6b8282b83f95c4924d76420b13f279}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a1c6b8282b83f95c4924d76420b13f279}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V2&F\+O\+SC D\+I\+V\+I\+D\+ED BY 2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_DIV8@{ADC\_CKSEL\_FOSC\_DIV8}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_DIV8@{ADC\_CKSEL\_FOSC\_DIV8}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a9f648a642db9561a61a7e5b844d1b23a}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a9f648a642db9561a61a7e5b844d1b23a}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V8&F\+O\+SC D\+I\+V\+I\+D\+ED BY 8. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_DIV32@{ADC\_CKSEL\_FOSC\_DIV32}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_DIV32@{ADC\_CKSEL\_FOSC\_DIV32}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a6d4be3d71e3571bc63725f4220062eeb}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a6d4be3d71e3571bc63725f4220062eeb}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V32&F\+O\+SC D\+I\+V\+I\+D\+ED BY 32. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_RC@{ADC\_CKSEL\_FOSC\_RC}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_RC@{ADC\_CKSEL\_FOSC\_RC}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a46f1022b68ad17676be6670eb322851f}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a46f1022b68ad17676be6670eb322851f}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+RC&Driven by the Internal RC Oscillator. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_DIV4@{ADC\_CKSEL\_FOSC\_DIV4}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_DIV4@{ADC\_CKSEL\_FOSC\_DIV4}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a85cab5c7fc271e051258801bf82639e1}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4a85cab5c7fc271e051258801bf82639e1}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V4&F\+O\+SC D\+I\+V\+I\+D\+ED BY 4. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_DIV16@{ADC\_CKSEL\_FOSC\_DIV16}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_DIV16@{ADC\_CKSEL\_FOSC\_DIV16}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4aa87f48073fb18db884430b927ee61410}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4aa87f48073fb18db884430b927ee61410}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V16&F\+O\+SC D\+I\+V\+I\+D\+ED BY 16. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_CKSEL\_FOSC\_DIV64@{ADC\_CKSEL\_FOSC\_DIV64}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_CKSEL\_FOSC\_DIV64@{ADC\_CKSEL\_FOSC\_DIV64}}}\mbox{\Hypertarget{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4aa361c7cd44779aa87b57eb4ac3f52a5e}\label{pic__adc_8h_a4c6806d44cae3d9a0fbff1aed5ecb2f4aa361c7cd44779aa87b57eb4ac3f52a5e}} 
+A\+D\+C\+\_\+\+C\+K\+S\+E\+L\+\_\+\+F\+O\+S\+C\+\_\+\+D\+I\+V64&F\+O\+SC D\+I\+V\+I\+D\+ED BY 64. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2d}\label{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2d}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_FMTSEL\_ET@{ADC\_FMTSEL\_ET}}
+\index{ADC\_FMTSEL\_ET@{ADC\_FMTSEL\_ET}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_FMTSEL\_ET}{ADC\_FMTSEL\_ET}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2d}{A\+D\+C\+\_\+\+F\+M\+T\+S\+E\+L\+\_\+\+ET}}}
+
+
+
+This Enum Contains Options for Right adjusted result format or left adjusted. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_FMT\_RADJ@{ADC\_FMT\_RADJ}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_FMT\_RADJ@{ADC\_FMT\_RADJ}}}\mbox{\Hypertarget{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2da8387db00509d5081a796417d22f7a0f4}\label{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2da8387db00509d5081a796417d22f7a0f4}} 
+A\+D\+C\+\_\+\+F\+M\+T\+\_\+\+R\+A\+DJ&Conversion Result is Right Adjusted . \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_FMT\_LADJ@{ADC\_FMT\_LADJ}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_FMT\_LADJ@{ADC\_FMT\_LADJ}}}\mbox{\Hypertarget{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2da1733f91e2aa9b58dc83e78f904ec1964}\label{pic__adc_8h_acf2464851ccba45452e9ccd6353e6c2da1733f91e2aa9b58dc83e78f904ec1964}} 
+A\+D\+C\+\_\+\+F\+M\+T\+\_\+\+L\+A\+DJ&Conversion Result is Left Adjusted . \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_ET@{ADC\_PCFG\_ET}}
+\index{ADC\_PCFG\_ET@{ADC\_PCFG\_ET}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_PCFG\_ET}{ADC\_PCFG\_ET}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18}{A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+ET}}}
+
+This Enum Contains Port Configuration is according to the analog in to reference ratio Reference pins are always A\+N3 for Positive and A\+N2 for Negative A stands for Analog Pin , D for Digital , R for Reference Pin \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_80@{ADC\_PCFG\_CR\_80}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_80@{ADC\_PCFG\_CR\_80}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a2bd99558a3c4e2a5e5963f676d9ffe74}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a2bd99558a3c4e2a5e5963f676d9ffe74}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+80&Port Shape \+: A\+A\+A\+A\+A\+A\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_71@{ADC\_PCFG\_CR\_71}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_71@{ADC\_PCFG\_CR\_71}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ad6b93574a283727c653aebc442ec235f}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ad6b93574a283727c653aebc442ec235f}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+71&Port Shape \+: A\+A\+A\+A\+R\+A\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_50@{ADC\_PCFG\_CR\_50}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_50@{ADC\_PCFG\_CR\_50}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6f9814e98dbc3a12376daf5d1938aa34}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6f9814e98dbc3a12376daf5d1938aa34}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+50&Port Shape \+: D\+D\+D\+A\+A\+A\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_41@{ADC\_PCFG\_CR\_41}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_41@{ADC\_PCFG\_CR\_41}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a8441843647b4e99f4875529ece3069d4}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a8441843647b4e99f4875529ece3069d4}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+41&Port Shape \+: D\+D\+D\+A\+R\+A\+AA ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_30@{ADC\_PCFG\_CR\_30}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_30@{ADC\_PCFG\_CR\_30}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ac93b7a2e8085354c0282f00ca2ded274}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ac93b7a2e8085354c0282f00ca2ded274}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+30&Port Shape \+: D\+D\+D\+D\+A\+D\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_21@{ADC\_PCFG\_CR\_21}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_21@{ADC\_PCFG\_CR\_21}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a5aaac186f7c68c20c8801877aa93c377}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a5aaac186f7c68c20c8801877aa93c377}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+21&Port Shape \+: D\+D\+D\+D\+R\+D\+AA ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_00@{ADC\_PCFG\_CR\_00}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_00@{ADC\_PCFG\_CR\_00}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6cd3c93f59f5286d402d2fe6f9862db7}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6cd3c93f59f5286d402d2fe6f9862db7}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+00&Port Shape \+: D\+D\+D\+D\+D\+D\+DD ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_62@{ADC\_PCFG\_CR\_62}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_62@{ADC\_PCFG\_CR\_62}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ab26c953fa5c7989f4f5ebb250bf0f011}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ab26c953fa5c7989f4f5ebb250bf0f011}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+62&Port Shape \+: A\+A\+A\+A\+R\+R\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_60@{ADC\_PCFG\_CR\_60}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_60@{ADC\_PCFG\_CR\_60}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ab2623b5f20edf67ad6efbffca049e36a}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ab2623b5f20edf67ad6efbffca049e36a}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+60&Port Shape \+: D\+D\+A\+A\+A\+A\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_51@{ADC\_PCFG\_CR\_51}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_51@{ADC\_PCFG\_CR\_51}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6d8134c694e0f275c0beb3e8fce35fc6}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a6d8134c694e0f275c0beb3e8fce35fc6}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+51&Port Shape \+: D\+D\+A\+A\+R\+A\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_42@{ADC\_PCFG\_CR\_42}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_42@{ADC\_PCFG\_CR\_42}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ad3a3e763d57ba9124418e56eaf4a1b2f}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18ad3a3e763d57ba9124418e56eaf4a1b2f}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+42&Port Shape \+: D\+D\+A\+A\+R\+R\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_32@{ADC\_PCFG\_CR\_32}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_32@{ADC\_PCFG\_CR\_32}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a2269de0e53c39c3f98379092d1d324e7}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a2269de0e53c39c3f98379092d1d324e7}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+32&Port Shape \+: D\+D\+D\+A\+R\+R\+AA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_22@{ADC\_PCFG\_CR\_22}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_22@{ADC\_PCFG\_CR\_22}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a917a1e566944157f7984074ca1a704cc}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a917a1e566944157f7984074ca1a704cc}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+22&Port Shape \+: D\+D\+D\+D\+R\+R\+AA ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_10@{ADC\_PCFG\_CR\_10}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_10@{ADC\_PCFG\_CR\_10}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a44403222aa155b889e812f4cdd1865d9}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a44403222aa155b889e812f4cdd1865d9}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+10&Port Shape \+: D\+D\+D\+D\+D\+D\+DA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_PCFG\_CR\_12@{ADC\_PCFG\_CR\_12}!pic\_adc.h@{pic\_adc.h}}\index{pic\_adc.h@{pic\_adc.h}!ADC\_PCFG\_CR\_12@{ADC\_PCFG\_CR\_12}}}\mbox{\Hypertarget{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a212ef22667b91b6c40dc3d922c0356bc}\label{pic__adc_8h_aace5acd8b1a03c43ecdbdba3ac1d2f18a212ef22667b91b6c40dc3d922c0356bc}} 
+A\+D\+C\+\_\+\+P\+C\+F\+G\+\_\+\+C\+R\+\_\+12&Port Shape \+: D\+D\+D\+D\+R\+R\+DA. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pic__adc_8h_acb22dd4a372471e85e039300f3e36fb9}\label{pic__adc_8h_acb22dd4a372471e85e039300f3e36fb9}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_ClearFlag@{ADC\_ClearFlag}}
+\index{ADC\_ClearFlag@{ADC\_ClearFlag}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_ClearFlag()}{ADC\_ClearFlag()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Clear\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clears A\+DC Conversion Complete Flag. 
+
+This Function Clears , the Interrupt Flag Associated with the A\+DC Peripheral. \mbox{\Hypertarget{pic__adc_8h_af36bcc1c65abaa7e3be26a73722502d3}\label{pic__adc_8h_af36bcc1c65abaa7e3be26a73722502d3}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_DisableINT@{ADC\_DisableINT}}
+\index{ADC\_DisableINT@{ADC\_DisableINT}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_DisableINT()}{ADC\_DisableINT()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Disable\+I\+NT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables A\+DC Interrupts. 
+
+Disables Interrupt related to the A\+DC Peripheral. \mbox{\Hypertarget{pic__adc_8h_ac00bd03ae337fdb744e6b71794d20011}\label{pic__adc_8h_ac00bd03ae337fdb744e6b71794d20011}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_EnableINT@{ADC\_EnableINT}}
+\index{ADC\_EnableINT@{ADC\_EnableINT}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_EnableINT()}{ADC\_EnableINT()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Enable\+I\+NT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables A\+DC Interrupts ~\newline
+ 
+
+Enables the Interrupt related to the A\+DC Module . \mbox{\Hypertarget{pic__adc_8h_a9e6caabcb406f811404966f09939778a}\label{pic__adc_8h_a9e6caabcb406f811404966f09939778a}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_GetFlag@{ADC\_GetFlag}}
+\index{ADC\_GetFlag@{ADC\_GetFlag}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_GetFlag()}{ADC\_GetFlag()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+D\+C\+\_\+\+Get\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the A\+DC Peripheral Flag bit. 
+
+This Function retrieves the interrupt flag of the A\+DC Module ( Set when conversion completes ). \begin{DoxyReturn}{Returns}
+returns non zero if the flag is set , returns zero if it is not set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__adc_8h_acbe93874fa2bbb0ec317bcea3072d5b6}\label{pic__adc_8h_acbe93874fa2bbb0ec317bcea3072d5b6}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_Init@{ADC\_Init}}
+\index{ADC\_Init@{ADC\_Init}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_Init()}{ADC\_Init()}}
+{\footnotesize\ttfamily int8\+\_\+t A\+D\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} $\ast$}]{config\+\_\+s\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Initializes the A\+DC Peripheral using data contained in \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} Struct passed by reference. 
+
+This is a basic fill function , that initializes the A\+DC Perihperal using data provided in a configuration structure , that is passed as a pointer . 
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+s\+\_\+ptr} & \+: a Pointer to an \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} that Contains Initialization Information . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 if successful , returns -\/1 due to an assert error only if D\+E\+B\+U\+G\+\_\+\+M\+O\+DE is defined . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__adc_8h_a3ed3ca60bb577607da020df10abb3e94}\label{pic__adc_8h_a3ed3ca60bb577607da020df10abb3e94}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_StartConv\_B@{ADC\_StartConv\_B}}
+\index{ADC\_StartConv\_B@{ADC\_StartConv\_B}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_StartConv\_B()}{ADC\_StartConv\_B()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+D\+C\+\_\+\+Start\+Conv\+\_\+B (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Starts a Conversion and returns the result , this function is blocking. 
+
+This Function Initiates a Conversion and doesn\textquotesingle{}t return until the Conversion has finished . This Function is Blocking . \begin{DoxyReturn}{Returns}
+returns the result of the conversion ( only the first 10 bits are relevant ) . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__adc_8h_a306095f6116a34dde552903d69c8617b}\label{pic__adc_8h_a306095f6116a34dde552903d69c8617b}} 
+\index{pic\_adc.h@{pic\_adc.h}!ADC\_StartConv\_NB@{ADC\_StartConv\_NB}}
+\index{ADC\_StartConv\_NB@{ADC\_StartConv\_NB}!pic\_adc.h@{pic\_adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_StartConv\_NB()}{ADC\_StartConv\_NB()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Start\+Conv\+\_\+\+NB (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Starts a Conversion and returns immediately , this function is non blocking. 
+
+This Function Initiates a Conversion and returns Immediately , it is up to the user to check if the operation has completed to get the result by either using an interrupt , or checking flags after some time . This Function is Non Blocking . \begin{DoxyReturn}{Returns}
+returns the result of the conversion ( only the first 10 bits are relevant ) . 
+\end{DoxyReturn}

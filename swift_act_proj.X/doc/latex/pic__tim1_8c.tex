@@ -1,0 +1,40 @@
+\hypertarget{pic__tim1_8c}{}\doxysection{Drivers/src/pic\+\_\+tim1.c File Reference}
+\label{pic__tim1_8c}\index{Drivers/src/pic\_tim1.c@{Drivers/src/pic\_tim1.c}}
+{\ttfamily \#include \char`\"{}../incl/pic\+\_\+tim1.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pic__tim1_8c_a2019014b11eb4c332c32586e078018d5}{T\+I\+M1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em initialization routine for T\+I\+M\+E\+R1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__tim1_8c_ae2c5b80a65268def4100ad7a1683b196}{Display\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em initialization routine for the S\+E\+G\+M\+E\+NT Interface ( T\+I\+M\+E\+R2 is Initialized ) and Ports are Configured . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Author \+: Mohamed Yousry Mohamed R\+A\+S\+A\+H\+AD . Date \+: 7/2/2020 File \+: \mbox{\hyperlink{pic__tim1_8c}{pic\+\_\+tim1.\+c}}
+
+Description \+: This File Contains Implementation of T\+I\+M\+E\+R1/\+T\+I\+M\+E\+R2/7\+S\+EG D\+I\+S\+P\+L\+AY Initialization Functions that set interrupt rates for T\+I\+M1/\+T\+I\+M2 , That Handle Many tasks in the Project \mbox{[}Electric Heater\mbox{]}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pic__tim1_8c_ae2c5b80a65268def4100ad7a1683b196}\label{pic__tim1_8c_ae2c5b80a65268def4100ad7a1683b196}} 
+\index{pic\_tim1.c@{pic\_tim1.c}!DisplayInit@{DisplayInit}}
+\index{DisplayInit@{DisplayInit}!pic\_tim1.c@{pic\_tim1.c}}
+\doxysubsubsection{\texorpdfstring{DisplayInit()}{DisplayInit()}}
+{\footnotesize\ttfamily void Display\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+initialization routine for the S\+E\+G\+M\+E\+NT Interface ( T\+I\+M\+E\+R2 is Initialized ) and Ports are Configured . 
+
+This Function Initializes the 2 D\+I\+G\+IT Segments and Their Respective Ports as well as initialize T\+I\+M\+E\+R2 and its interrupts at a specified rate to be able to scan the digits . \mbox{\Hypertarget{pic__tim1_8c_a2019014b11eb4c332c32586e078018d5}\label{pic__tim1_8c_a2019014b11eb4c332c32586e078018d5}} 
+\index{pic\_tim1.c@{pic\_tim1.c}!TIM1\_Init@{TIM1\_Init}}
+\index{TIM1\_Init@{TIM1\_Init}!pic\_tim1.c@{pic\_tim1.c}}
+\doxysubsubsection{\texorpdfstring{TIM1\_Init()}{TIM1\_Init()}}
+{\footnotesize\ttfamily void T\+I\+M1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+initialization routine for T\+I\+M\+E\+R1 
+
+This Function Initializes T\+I\+M\+E\+R1 So that it is Set to use no scalers at all , operate at F\+O\+SC /4 , which is 8M\+HZ /4 About 2M\+HZ , then a count of 0X\+F\+F\+FF , gets us at 32ms per Overflow which should be good , for scanning the buttons , and prevent bouncing issues, as well as 3 of those overflows get us at 99 ms , which should be a good time to start a conversion , given that conversion will take 11 cycles of its own , that should add up to 100ms per conversion ~\newline
+ 

@@ -1,0 +1,69 @@
+\hypertarget{eep_8h}{}\doxysection{Drivers/incl/eep.h File Reference}
+\label{eep_8h}\index{Drivers/incl/eep.h@{Drivers/incl/eep.h}}
+{\ttfamily \#include \char`\"{}../../config/pconfig.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{eep_8h_a38ad9a8a56f002382d5f2e2433ab767e}\label{eep_8h_a38ad9a8a56f002382d5f2e2433ab767e}} 
+\#define {\bfseries E\+E\+P\+\_\+\+T\+O\+K\+EN}~1UL
+\item 
+\mbox{\Hypertarget{eep_8h_a03f395d85b0b6a45f5cbca959ccaf1a2}\label{eep_8h_a03f395d85b0b6a45f5cbca959ccaf1a2}} 
+\#define {\bfseries H\+A\+R\+D\+W\+I\+R\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS}~0\+B00
+\item 
+\mbox{\Hypertarget{eep_8h_a457be1c5e5fee67ed7d01f5887c2d656}\label{eep_8h_a457be1c5e5fee67ed7d01f5887c2d656}} 
+\#define {\bfseries D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~(0\+B10100000 $\vert$ ( H\+A\+R\+D\+W\+I\+R\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS $<$$<$ 2 ))
+\item 
+\mbox{\Hypertarget{eep_8h_a71aa63482121e1e45d8a8e741c0895c7}\label{eep_8h_a71aa63482121e1e45d8a8e741c0895c7}} 
+\#define {\bfseries D\+E\+V\+I\+C\+E\+\_\+\+W\+R\+I\+TE}~0
+\item 
+\mbox{\Hypertarget{eep_8h_a85591f4913899639fd4d0ba05d71db7b}\label{eep_8h_a85591f4913899639fd4d0ba05d71db7b}} 
+\#define {\bfseries D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+AD}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{eep_8h_ac8b3261f5ec8d374cbf6638e5e113116}{eep\+Byte\+Write}} (uint8\+\_\+t bval, uint16\+\_\+t Addr)
+\begin{DoxyCompactList}\small\item\em This Function Writes a single byte to an address in the address space of the eeprom. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{eep_8h_af2cc2c348b75e020647354b1edea1eb2}{eep\+Byte\+Read}} (uint16\+\_\+t Addr)
+\begin{DoxyCompactList}\small\item\em This Function Reads a byte from an address in the address space of the eeprom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{eep_8h_af2cc2c348b75e020647354b1edea1eb2}\label{eep_8h_af2cc2c348b75e020647354b1edea1eb2}} 
+\index{eep.h@{eep.h}!eepByteRead@{eepByteRead}}
+\index{eepByteRead@{eepByteRead}!eep.h@{eep.h}}
+\doxysubsubsection{\texorpdfstring{eepByteRead()}{eepByteRead()}}
+{\footnotesize\ttfamily int16\+\_\+t eep\+Byte\+Read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Addr }\end{DoxyParamCaption})}
+
+
+
+This Function Reads a byte from an address in the address space of the eeprom. 
+
+This Function Reads a single byte from some address in the address space , of the eeprom . 
+\begin{DoxyParams}{Parameters}
+{\em Addr} & \+: eeprom memory address , to read from, notice ( only first 9 bits are relevant ) due to eeprom capacity . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the read byte if Operation was successful , returns -\/1 if the device returned N\+A\+CK a request . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eep_8h_ac8b3261f5ec8d374cbf6638e5e113116}\label{eep_8h_ac8b3261f5ec8d374cbf6638e5e113116}} 
+\index{eep.h@{eep.h}!eepByteWrite@{eepByteWrite}}
+\index{eepByteWrite@{eepByteWrite}!eep.h@{eep.h}}
+\doxysubsubsection{\texorpdfstring{eepByteWrite()}{eepByteWrite()}}
+{\footnotesize\ttfamily int8\+\_\+t eep\+Byte\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bval,  }\item[{uint16\+\_\+t}]{Addr }\end{DoxyParamCaption})}
+
+
+
+This Function Writes a single byte to an address in the address space of the eeprom. 
+
+This Function Writes a single byte to some address in the address space , of the eeprom . 
+\begin{DoxyParams}{Parameters}
+{\em bval} & \+: byte to be written to the eeprom . \\
+\hline
+{\em Addr} & \+: eeprom memory address , to write to, notice ( only first 9 bits are relevant ) due to eeprom capacity . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if Operation was successful , returns -\/1 if the device returned N\+A\+CK a request . 
+\end{DoxyReturn}

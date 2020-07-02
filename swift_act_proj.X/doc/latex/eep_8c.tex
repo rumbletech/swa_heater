@@ -1,0 +1,58 @@
+\hypertarget{eep_8c}{}\doxysection{Drivers/src/eep.c File Reference}
+\label{eep_8c}\index{Drivers/src/eep.c@{Drivers/src/eep.c}}
+{\ttfamily \#include \char`\"{}../incl/eep.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{eep_8c_ac8b3261f5ec8d374cbf6638e5e113116}{eep\+Byte\+Write}} (uint8\+\_\+t bval, uint16\+\_\+t Addr)
+\begin{DoxyCompactList}\small\item\em This Function Writes a single byte to an address in the address space of the eeprom. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{eep_8c_af2cc2c348b75e020647354b1edea1eb2}{eep\+Byte\+Read}} (uint16\+\_\+t Addr)
+\begin{DoxyCompactList}\small\item\em This Function Reads a byte from an address in the address space of the eeprom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Author \+: Mohamed Yousry Mohamed Rashad File \+: \mbox{\hyperlink{eep_8c}{eep.\+c}} Date \+: 7/2/2020
+
+Description \+: This File Contains E\+E\+P\+W\+R\+I\+TE A\+ND E\+E\+P\+R\+E\+AD Function Implementation for the 24C04 4K B\+I\+TS C\+A\+P\+A\+C\+I\+TY E\+E\+P\+R\+OM , it is not compatible with other types , only these 2 functions are implemented as it is only needed to write and read a few bytes , from the eeprom , so burst read/write methods are ignored .
+
+This File Uses \mbox{\hyperlink{pic__i2c_8c}{pic\+\_\+i2c.\+c}} Functions . 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{eep_8c_af2cc2c348b75e020647354b1edea1eb2}\label{eep_8c_af2cc2c348b75e020647354b1edea1eb2}} 
+\index{eep.c@{eep.c}!eepByteRead@{eepByteRead}}
+\index{eepByteRead@{eepByteRead}!eep.c@{eep.c}}
+\doxysubsubsection{\texorpdfstring{eepByteRead()}{eepByteRead()}}
+{\footnotesize\ttfamily int16\+\_\+t eep\+Byte\+Read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Addr }\end{DoxyParamCaption})}
+
+
+
+This Function Reads a byte from an address in the address space of the eeprom. 
+
+This Function Reads a single byte from some address in the address space , of the eeprom . 
+\begin{DoxyParams}{Parameters}
+{\em Addr} & \+: eeprom memory address , to read from, notice ( only first 9 bits are relevant ) due to eeprom capacity . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the read byte if Operation was successful , returns -\/1 if the device returned N\+A\+CK a request . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{eep_8c_ac8b3261f5ec8d374cbf6638e5e113116}\label{eep_8c_ac8b3261f5ec8d374cbf6638e5e113116}} 
+\index{eep.c@{eep.c}!eepByteWrite@{eepByteWrite}}
+\index{eepByteWrite@{eepByteWrite}!eep.c@{eep.c}}
+\doxysubsubsection{\texorpdfstring{eepByteWrite()}{eepByteWrite()}}
+{\footnotesize\ttfamily int8\+\_\+t eep\+Byte\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bval,  }\item[{uint16\+\_\+t}]{Addr }\end{DoxyParamCaption})}
+
+
+
+This Function Writes a single byte to an address in the address space of the eeprom. 
+
+This Function Writes a single byte to some address in the address space , of the eeprom . 
+\begin{DoxyParams}{Parameters}
+{\em bval} & \+: byte to be written to the eeprom . \\
+\hline
+{\em Addr} & \+: eeprom memory address , to write to, notice ( only first 9 bits are relevant ) due to eeprom capacity . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if Operation was successful , returns -\/1 if the device returned N\+A\+CK a request . 
+\end{DoxyReturn}

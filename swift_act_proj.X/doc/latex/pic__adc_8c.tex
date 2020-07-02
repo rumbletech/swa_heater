@@ -1,0 +1,130 @@
+\hypertarget{pic__adc_8c}{}\doxysection{Drivers/src/pic\+\_\+adc.c File Reference}
+\label{pic__adc_8c}\index{Drivers/src/pic\_adc.c@{Drivers/src/pic\_adc.c}}
+{\ttfamily \#include \char`\"{}../incl/pic\+\_\+adc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{pic__adc_8c_a9e6caabcb406f811404966f09939778a}{A\+D\+C\+\_\+\+Get\+Flag}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the A\+DC Peripheral Flag bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8c_acb22dd4a372471e85e039300f3e36fb9}{A\+D\+C\+\_\+\+Clear\+Flag}} (void)
+\begin{DoxyCompactList}\small\item\em Clears A\+DC Conversion Complete Flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8c_ac00bd03ae337fdb744e6b71794d20011}{A\+D\+C\+\_\+\+Enable\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em Enables A\+DC Interrupts ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8c_af36bcc1c65abaa7e3be26a73722502d3}{A\+D\+C\+\_\+\+Disable\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em Disables A\+DC Interrupts. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{pic__adc_8c_a3ed3ca60bb577607da020df10abb3e94}{A\+D\+C\+\_\+\+Start\+Conv\+\_\+B}} (void)
+\begin{DoxyCompactList}\small\item\em Starts a Conversion and returns the result , this function is blocking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8c_a306095f6116a34dde552903d69c8617b}{A\+D\+C\+\_\+\+Start\+Conv\+\_\+\+NB}} (void)
+\begin{DoxyCompactList}\small\item\em Starts a Conversion and returns immediately , this function is non blocking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pic__adc_8c_ab03ebe122e719f7e70872544bdbd1e93}{A\+D\+C\+\_\+\+Select\+CH}} (uint8\+\_\+t ch\+\_\+num)
+\item 
+int8\+\_\+t \mbox{\hyperlink{pic__adc_8c_acbe93874fa2bbb0ec317bcea3072d5b6}{A\+D\+C\+\_\+\+Init}} (\mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} $\ast$config\+\_\+s\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the A\+DC Peripheral using data contained in \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} Struct passed by reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Author \+: Mohamed Yousry Mohamed Rashad File \+: \mbox{\hyperlink{pic__adc_8c}{pic\+\_\+adc.\+c}} Date \+: 7/2/2020
+
+This File Contains Basic Routines(\+Implementation) , that faciliate using the A\+DC Peripheral for the P\+IC Microcontroller, Routines that do the following , get Interrupt flags , Enable/\+Disable Interrupts , Start Conversions , Initalization, Channel Switching , etc . 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pic__adc_8c_acb22dd4a372471e85e039300f3e36fb9}\label{pic__adc_8c_acb22dd4a372471e85e039300f3e36fb9}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_ClearFlag@{ADC\_ClearFlag}}
+\index{ADC\_ClearFlag@{ADC\_ClearFlag}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_ClearFlag()}{ADC\_ClearFlag()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Clear\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clears A\+DC Conversion Complete Flag. 
+
+This Function Clears , the Interrupt Flag Associated with the A\+DC Peripheral. \mbox{\Hypertarget{pic__adc_8c_af36bcc1c65abaa7e3be26a73722502d3}\label{pic__adc_8c_af36bcc1c65abaa7e3be26a73722502d3}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_DisableINT@{ADC\_DisableINT}}
+\index{ADC\_DisableINT@{ADC\_DisableINT}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_DisableINT()}{ADC\_DisableINT()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Disable\+I\+NT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables A\+DC Interrupts. 
+
+Disables Interrupt related to the A\+DC Peripheral. \mbox{\Hypertarget{pic__adc_8c_ac00bd03ae337fdb744e6b71794d20011}\label{pic__adc_8c_ac00bd03ae337fdb744e6b71794d20011}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_EnableINT@{ADC\_EnableINT}}
+\index{ADC\_EnableINT@{ADC\_EnableINT}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_EnableINT()}{ADC\_EnableINT()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Enable\+I\+NT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables A\+DC Interrupts ~\newline
+ 
+
+Enables the Interrupt related to the A\+DC Module . \mbox{\Hypertarget{pic__adc_8c_a9e6caabcb406f811404966f09939778a}\label{pic__adc_8c_a9e6caabcb406f811404966f09939778a}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_GetFlag@{ADC\_GetFlag}}
+\index{ADC\_GetFlag@{ADC\_GetFlag}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_GetFlag()}{ADC\_GetFlag()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+D\+C\+\_\+\+Get\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the A\+DC Peripheral Flag bit. 
+
+This Function retrieves the interrupt flag of the A\+DC Module ( Set when conversion completes ). \begin{DoxyReturn}{Returns}
+returns non zero if the flag is set , returns zero if it is not set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__adc_8c_acbe93874fa2bbb0ec317bcea3072d5b6}\label{pic__adc_8c_acbe93874fa2bbb0ec317bcea3072d5b6}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_Init@{ADC\_Init}}
+\index{ADC\_Init@{ADC\_Init}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_Init()}{ADC\_Init()}}
+{\footnotesize\ttfamily int8\+\_\+t A\+D\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} $\ast$}]{config\+\_\+s\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Initializes the A\+DC Peripheral using data contained in \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} Struct passed by reference. 
+
+This is a basic fill function , that initializes the A\+DC Perihperal using data provided in a configuration structure , that is passed as a pointer . 
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+s\+\_\+ptr} & \+: a Pointer to an \mbox{\hyperlink{struct_a_d_c___config___s}{A\+D\+C\+\_\+\+Config\+\_\+S}} that Contains Initialization Information . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 if successful , returns -\/1 due to an assert error only if D\+E\+B\+U\+G\+\_\+\+M\+O\+DE is defined . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__adc_8c_ab03ebe122e719f7e70872544bdbd1e93}\label{pic__adc_8c_ab03ebe122e719f7e70872544bdbd1e93}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_SelectCH@{ADC\_SelectCH}}
+\index{ADC\_SelectCH@{ADC\_SelectCH}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_SelectCH()}{ADC\_SelectCH()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Select\+CH (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ch\+\_\+num }\end{DoxyParamCaption})}
+
+This Function Switches the Current channel of the adc module to the one specified in the parameter. 
+\begin{DoxyParams}{Parameters}
+{\em ch\+\_\+num} & \+: channel number to switch to ( only valid numbers are from 0 to 7 ). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pic__adc_8c_a3ed3ca60bb577607da020df10abb3e94}\label{pic__adc_8c_a3ed3ca60bb577607da020df10abb3e94}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_StartConv\_B@{ADC\_StartConv\_B}}
+\index{ADC\_StartConv\_B@{ADC\_StartConv\_B}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_StartConv\_B()}{ADC\_StartConv\_B()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+D\+C\+\_\+\+Start\+Conv\+\_\+B (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Starts a Conversion and returns the result , this function is blocking. 
+
+This Function Initiates a Conversion and doesn\textquotesingle{}t return until the Conversion has finished . This Function is Blocking . \begin{DoxyReturn}{Returns}
+returns the result of the conversion ( only the first 10 bits are relevant ) . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pic__adc_8c_a306095f6116a34dde552903d69c8617b}\label{pic__adc_8c_a306095f6116a34dde552903d69c8617b}} 
+\index{pic\_adc.c@{pic\_adc.c}!ADC\_StartConv\_NB@{ADC\_StartConv\_NB}}
+\index{ADC\_StartConv\_NB@{ADC\_StartConv\_NB}!pic\_adc.c@{pic\_adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_StartConv\_NB()}{ADC\_StartConv\_NB()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Start\+Conv\+\_\+\+NB (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Starts a Conversion and returns immediately , this function is non blocking. 
+
+This Function Initiates a Conversion and returns Immediately , it is up to the user to check if the operation has completed to get the result by either using an interrupt , or checking flags after some time . This Function is Non Blocking . \begin{DoxyReturn}{Returns}
+returns the result of the conversion ( only the first 10 bits are relevant ) . 
+\end{DoxyReturn}

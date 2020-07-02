@@ -1,0 +1,277 @@
+\hypertarget{pconfig_8h}{}\doxysection{config/pconfig.h File Reference}
+\label{pconfig_8h}\index{config/pconfig.h@{config/pconfig.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Drivers/incl/pic\+\_\+adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Drivers/incl/\+Seg\+\_\+\+Dis.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Drivers/incl/pic\+\_\+tim1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Drivers/incl/pic\+\_\+i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Drivers/incl/eep.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pconfig_8h_a9eecf37dbbbaec26bc8b839cb16f15b6}\label{pconfig_8h_a9eecf37dbbbaec26bc8b839cb16f15b6}} 
+\#define {\bfseries P\+C\+O\+N\+F\+I\+G\+\_\+\+T\+O\+K\+E\+N\+\_\+H}~1UL
+\item 
+\mbox{\Hypertarget{pconfig_8h_a024148e99a7143db044a48216664d03d}\label{pconfig_8h_a024148e99a7143db044a48216664d03d}} 
+\#define \mbox{\hyperlink{pconfig_8h_a024148e99a7143db044a48216664d03d}{\+\_\+\+X\+T\+A\+L\+\_\+\+F\+R\+EQ}}~8000000\+UL
+\begin{DoxyCompactList}\small\item\em X\+T\+AL F\+R\+EQ D\+E\+F\+I\+N\+I\+T\+I\+ON F\+OR D\+E\+L\+AY R\+E\+L\+A\+T\+ED F\+U\+N\+C\+T\+I\+O\+NS as Well as for Calculating Peripheral Clocks in some Init Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_aaf6154161b94d5069ed1e7fedbcd4751}\label{pconfig_8h_aaf6154161b94d5069ed1e7fedbcd4751}} 
+\#define \mbox{\hyperlink{pconfig_8h_aaf6154161b94d5069ed1e7fedbcd4751}{P\+I\+\_\+\+EN}}()~I\+N\+T\+C\+ON $\vert$= ( 1 $<$$<$ \+\_\+\+I\+N\+T\+C\+O\+N\+\_\+\+P\+E\+I\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON )
+\begin{DoxyCompactList}\small\item\em T\+H\+IS M\+A\+C\+RO E\+N\+A\+B\+L\+ES P\+E\+R\+I\+P\+H\+E\+R\+AL I\+N\+T\+E\+R\+R\+U\+PT B\+IT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_aae6eee2b5aac8ea6aa1c5cdc93acc46d}\label{pconfig_8h_aae6eee2b5aac8ea6aa1c5cdc93acc46d}} 
+\#define \mbox{\hyperlink{pconfig_8h_aae6eee2b5aac8ea6aa1c5cdc93acc46d}{G\+I\+\_\+\+EN}}()~I\+N\+T\+C\+ON $\vert$= ( 1 $<$$<$ \+\_\+\+I\+N\+T\+C\+O\+N\+\_\+\+G\+I\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON )
+\begin{DoxyCompactList}\small\item\em T\+H\+IS M\+A\+C\+RO E\+N\+A\+B\+L\+ES G\+L\+O\+B\+AL I\+N\+T\+E\+R\+R\+U\+P\+TS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ad72b9bbbd9a06408e9f3a666b5e19168}\label{pconfig_8h_ad72b9bbbd9a06408e9f3a666b5e19168}} 
+\#define \mbox{\hyperlink{pconfig_8h_ad72b9bbbd9a06408e9f3a666b5e19168}{G\+I\+\_\+\+D\+IS}}()~I\+N\+T\+C\+ON \&= $\sim$ ( 1 $<$$<$  \+\_\+\+I\+N\+T\+C\+O\+N\+\_\+\+G\+I\+E\+\_\+\+P\+O\+S\+I\+T\+I\+ON )
+\begin{DoxyCompactList}\small\item\em T\+H\+IS M\+A\+C\+RO D\+I\+S\+A\+B\+L\+ES G\+L\+O\+B\+AL I\+N\+T\+E\+R\+R\+U\+P\+TS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_af950733cac82083ea731b82d2c81cb25}\label{pconfig_8h_af950733cac82083ea731b82d2c81cb25}} 
+\#define \mbox{\hyperlink{pconfig_8h_af950733cac82083ea731b82d2c81cb25}{I\+N\+T\+\_\+\+C\+L\+E\+AR}}()~P\+I\+R1 = 0
+\begin{DoxyCompactList}\small\item\em T\+H\+IS M\+A\+C\+RO C\+L\+E\+A\+RS P\+E\+R\+I\+P\+H\+E\+R\+AL I\+N\+T\+E\+R\+R\+U\+P\+TS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a72441711f37a223008938ca5a3472255}\label{pconfig_8h_a72441711f37a223008938ca5a3472255}} 
+\#define \mbox{\hyperlink{pconfig_8h_a72441711f37a223008938ca5a3472255}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+ON}}()~\mbox{\hyperlink{pconfig_8h_a629919dedff4885a67de3313d8af3dde}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+O\+RT}}$\vert$= ( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em T\+U\+R\+NS ON H\+E\+A\+T\+ER L\+ED. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a2179a1f065fbe9057d6f10e0722d5d55}\label{pconfig_8h_a2179a1f065fbe9057d6f10e0722d5d55}} 
+\#define \mbox{\hyperlink{pconfig_8h_a2179a1f065fbe9057d6f10e0722d5d55}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+O\+FF}}()~\mbox{\hyperlink{pconfig_8h_a629919dedff4885a67de3313d8af3dde}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+O\+RT}} \&= $\sim$ ( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em T\+U\+R\+NS O\+FF H\+E\+A\+T\+ER L\+ED. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a063e3bfdafed2072a65d4e1b9ef3fa86}\label{pconfig_8h_a063e3bfdafed2072a65d4e1b9ef3fa86}} 
+\#define \mbox{\hyperlink{pconfig_8h_a063e3bfdafed2072a65d4e1b9ef3fa86}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+S\+E\+T\+UP}}()~\mbox{\hyperlink{pconfig_8h_a366280321dfd6c54891ec53b93f4856f}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+T\+R\+IS}}\&= $\sim$ ( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+IN}} ); \mbox{\hyperlink{pconfig_8h_a629919dedff4885a67de3313d8af3dde}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+O\+RT}}\&= $\sim$ ( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em C\+O\+N\+F\+I\+G\+U\+R\+ES H\+E\+A\+T\+ER L\+ED P\+IN. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a2023f84cd0e81e12fdf4f80db2d74c52}\label{pconfig_8h_a2023f84cd0e81e12fdf4f80db2d74c52}} 
+\#define \mbox{\hyperlink{pconfig_8h_a2023f84cd0e81e12fdf4f80db2d74c52}{H\+E\+A\+T\+E\+R\+\_\+\+ON}}()~\mbox{\hyperlink{pconfig_8h_a1db33a00438416c3840fc776dada6448}{H\+E\+A\+T\+E\+R\+\_\+\+P\+O\+RT}} $\vert$= ( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_a1a4cece415ae7d43099dae4ff8b8a31c}{H\+E\+A\+T\+E\+R\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em T\+U\+R\+NS ON H\+E\+A\+T\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a29434002d14a6358162056d6603cc1c1}\label{pconfig_8h_a29434002d14a6358162056d6603cc1c1}} 
+\#define \mbox{\hyperlink{pconfig_8h_a29434002d14a6358162056d6603cc1c1}{H\+E\+A\+T\+E\+R\+\_\+\+O\+FF}}()~\mbox{\hyperlink{pconfig_8h_a1db33a00438416c3840fc776dada6448}{H\+E\+A\+T\+E\+R\+\_\+\+P\+O\+RT}} \&= $\sim$( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_a1a4cece415ae7d43099dae4ff8b8a31c}{H\+E\+A\+T\+E\+R\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em T\+U\+R\+NS O\+FF H\+E\+A\+T\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a1bdf099d4de440a12a6c822b91a22d65}\label{pconfig_8h_a1bdf099d4de440a12a6c822b91a22d65}} 
+\#define \mbox{\hyperlink{pconfig_8h_a1bdf099d4de440a12a6c822b91a22d65}{C\+O\+O\+L\+E\+R\+\_\+\+ON}}()~\mbox{\hyperlink{pconfig_8h_acae9a875105ae54eb0ad548764b62d4f}{C\+O\+O\+L\+E\+R\+\_\+\+P\+O\+RT}} $\vert$= ( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_a1e6be812dc6a353e52feaca743f7e080}{C\+O\+O\+L\+E\+R\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em T\+U\+R\+NS ON C\+O\+O\+L\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a4b62649ff1be8892b50a1bc7666205d4}\label{pconfig_8h_a4b62649ff1be8892b50a1bc7666205d4}} 
+\#define \mbox{\hyperlink{pconfig_8h_a4b62649ff1be8892b50a1bc7666205d4}{C\+O\+O\+L\+E\+R\+\_\+\+O\+FF}}()~\mbox{\hyperlink{pconfig_8h_acae9a875105ae54eb0ad548764b62d4f}{C\+O\+O\+L\+E\+R\+\_\+\+P\+O\+RT}} \&= $\sim$( 1 $<$$<$ \mbox{\hyperlink{pconfig_8h_a1e6be812dc6a353e52feaca743f7e080}{C\+O\+O\+L\+E\+R\+\_\+\+P\+IN}} )
+\begin{DoxyCompactList}\small\item\em T\+U\+R\+NS O\+FF C\+O\+O\+L\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ad85027fcd3ea73d1b61db3cd43149330}\label{pconfig_8h_ad85027fcd3ea73d1b61db3cd43149330}} 
+\#define \mbox{\hyperlink{pconfig_8h_ad85027fcd3ea73d1b61db3cd43149330}{D\+I\+S4\+\_\+\+P\+IN}}~5
+\begin{DoxyCompactList}\small\item\em D\+I\+S4 , E\+N\+A\+B\+LE P\+IN N\+U\+M\+B\+ER F\+OR S\+E\+G\+M\+E\+NT N\+U\+M\+B\+ER 4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a7704b76297ff8b7dad772882896d9d46}\label{pconfig_8h_a7704b76297ff8b7dad772882896d9d46}} 
+\#define \mbox{\hyperlink{pconfig_8h_a7704b76297ff8b7dad772882896d9d46}{D\+I\+S4\+\_\+\+P\+O\+RT}}~P\+O\+R\+TA
+\begin{DoxyCompactList}\small\item\em D\+I\+S4 , E\+N\+A\+B\+LE P\+IN P\+O\+RT F\+OR S\+E\+G\+M\+E\+NT N\+U\+M\+B\+ER 4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_aa23441e22825a339084d9c758a6ec620}\label{pconfig_8h_aa23441e22825a339084d9c758a6ec620}} 
+\#define \mbox{\hyperlink{pconfig_8h_aa23441e22825a339084d9c758a6ec620}{D\+I\+S4\+\_\+\+T\+R\+IS}}~T\+R\+I\+SA
+\begin{DoxyCompactList}\small\item\em D\+I\+S4 , E\+N\+A\+B\+LE P\+IN T\+R\+IS F\+OR S\+E\+G\+M\+E\+NT N\+U\+M\+B\+ER 4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a73aaf17d46e101f9200e2c5bf45050eb}\label{pconfig_8h_a73aaf17d46e101f9200e2c5bf45050eb}} 
+\#define \mbox{\hyperlink{pconfig_8h_a73aaf17d46e101f9200e2c5bf45050eb}{D\+I\+S3\+\_\+\+P\+IN}}~4
+\begin{DoxyCompactList}\small\item\em D\+I\+S4 , E\+N\+A\+B\+LE P\+IN N\+U\+M\+B\+ER F\+OR S\+E\+G\+M\+E\+NT N\+U\+M\+B\+ER 3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ac45cd69cfa92310e8bde5f7294ffb761}\label{pconfig_8h_ac45cd69cfa92310e8bde5f7294ffb761}} 
+\#define \mbox{\hyperlink{pconfig_8h_ac45cd69cfa92310e8bde5f7294ffb761}{D\+I\+S3\+\_\+\+P\+O\+RT}}~P\+O\+R\+TA
+\begin{DoxyCompactList}\small\item\em D\+I\+S4 , E\+N\+A\+B\+LE P\+IN P\+O\+RT F\+OR S\+E\+G\+M\+E\+NT N\+U\+M\+B\+ER 3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a2b293103b9629fe7bb74ee92728edc76}\label{pconfig_8h_a2b293103b9629fe7bb74ee92728edc76}} 
+\#define \mbox{\hyperlink{pconfig_8h_a2b293103b9629fe7bb74ee92728edc76}{D\+I\+S3\+\_\+\+T\+R\+IS}}~T\+R\+I\+SA
+\begin{DoxyCompactList}\small\item\em D\+I\+S4 , E\+N\+A\+B\+LE P\+IN T\+R\+IS F\+OR S\+E\+G\+M\+E\+NT N\+U\+M\+B\+ER 3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ab1cb80a1f77004cf18ef4e81a30a22fd}\label{pconfig_8h_ab1cb80a1f77004cf18ef4e81a30a22fd}} 
+\#define \mbox{\hyperlink{pconfig_8h_ab1cb80a1f77004cf18ef4e81a30a22fd}{S\+E\+G\+\_\+\+P\+O\+RT}}~P\+O\+R\+TD
+\begin{DoxyCompactList}\small\item\em 7 S\+E\+G\+M\+E\+NT D\+A\+TA P\+O\+RT \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a10f137cc1ead467bfaea9d3a58f6f23d}\label{pconfig_8h_a10f137cc1ead467bfaea9d3a58f6f23d}} 
+\#define \mbox{\hyperlink{pconfig_8h_a10f137cc1ead467bfaea9d3a58f6f23d}{S\+E\+G\+\_\+\+T\+R\+IS}}~T\+R\+I\+SD
+\begin{DoxyCompactList}\small\item\em 7 S\+E\+G\+M\+E\+NT D\+A\+TA T\+R\+IS \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ab99177f35a21660d8c6d6f18aa4efc62}\label{pconfig_8h_ab99177f35a21660d8c6d6f18aa4efc62}} 
+\#define \mbox{\hyperlink{pconfig_8h_ab99177f35a21660d8c6d6f18aa4efc62}{S\+E\+G\+A\+\_\+\+P\+IN}}~0
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/A P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a552d30337ee9e00a40d5f1a797fe704a}\label{pconfig_8h_a552d30337ee9e00a40d5f1a797fe704a}} 
+\#define \mbox{\hyperlink{pconfig_8h_a552d30337ee9e00a40d5f1a797fe704a}{S\+E\+G\+B\+\_\+\+P\+IN}}~1
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/B P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a97f524a5083fbe57a688013743ef7451}\label{pconfig_8h_a97f524a5083fbe57a688013743ef7451}} 
+\#define \mbox{\hyperlink{pconfig_8h_a97f524a5083fbe57a688013743ef7451}{S\+E\+G\+C\+\_\+\+P\+IN}}~2
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/C P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a373c5019d4ddd0813e698d40ab3eace7}\label{pconfig_8h_a373c5019d4ddd0813e698d40ab3eace7}} 
+\#define \mbox{\hyperlink{pconfig_8h_a373c5019d4ddd0813e698d40ab3eace7}{S\+E\+G\+D\+\_\+\+P\+IN}}~3
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/D P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a6df08ad2b0042ddf3869870c142f7555}\label{pconfig_8h_a6df08ad2b0042ddf3869870c142f7555}} 
+\#define \mbox{\hyperlink{pconfig_8h_a6df08ad2b0042ddf3869870c142f7555}{S\+E\+G\+E\+\_\+\+P\+IN}}~4
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/E P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a5e8570090cea8123678db53aad49bf6b}\label{pconfig_8h_a5e8570090cea8123678db53aad49bf6b}} 
+\#define \mbox{\hyperlink{pconfig_8h_a5e8570090cea8123678db53aad49bf6b}{S\+E\+G\+F\+\_\+\+P\+IN}}~5
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/F P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_af5e0e30318bd5f088a0e82de773ce636}\label{pconfig_8h_af5e0e30318bd5f088a0e82de773ce636}} 
+\#define \mbox{\hyperlink{pconfig_8h_af5e0e30318bd5f088a0e82de773ce636}{S\+E\+G\+G\+\_\+\+P\+IN}}~6
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/G P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ae7c065e94f37986a92ec7747e242cb04}\label{pconfig_8h_ae7c065e94f37986a92ec7747e242cb04}} 
+\#define \mbox{\hyperlink{pconfig_8h_ae7c065e94f37986a92ec7747e242cb04}{S\+E\+G\+P\+\_\+\+P\+IN}}~7
+\begin{DoxyCompactList}\small\item\em L\+ED S\+E\+G-\/P P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a12b98c7eb73835e767e34f94d9df7008}\label{pconfig_8h_a12b98c7eb73835e767e34f94d9df7008}} 
+\#define \mbox{\hyperlink{pconfig_8h_a12b98c7eb73835e767e34f94d9df7008}{T\+E\+M\+P\+\_\+\+P\+O\+RT}}~P\+O\+R\+TA
+\begin{DoxyCompactList}\small\item\em T\+E\+M\+P\+E\+R\+A\+T\+U\+RE S\+E\+N\+S\+OR P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a00f0342506a37776704c9bf59a4039db}\label{pconfig_8h_a00f0342506a37776704c9bf59a4039db}} 
+\#define \mbox{\hyperlink{pconfig_8h_a00f0342506a37776704c9bf59a4039db}{T\+E\+M\+P\+\_\+\+P\+IN}}~2
+\begin{DoxyCompactList}\small\item\em T\+E\+M\+P\+E\+R\+A\+T\+U\+RE S\+E\+N\+S\+OR P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_af52789c753186cbfe529384dc8cf7a0c}\label{pconfig_8h_af52789c753186cbfe529384dc8cf7a0c}} 
+\#define \mbox{\hyperlink{pconfig_8h_af52789c753186cbfe529384dc8cf7a0c}{T\+E\+M\+P\+\_\+\+T\+R\+IS}}~T\+R\+I\+SA
+\begin{DoxyCompactList}\small\item\em T\+E\+M\+P\+E\+R\+A\+T\+U\+RE S\+E\+N\+S\+OR T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_aae28cffeedae4b439f3927a72bdda894}\label{pconfig_8h_aae28cffeedae4b439f3927a72bdda894}} 
+\#define \mbox{\hyperlink{pconfig_8h_aae28cffeedae4b439f3927a72bdda894}{I\+N\+C\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+O\+RT}}~P\+O\+R\+TB
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+R\+E\+M\+E\+NT B\+U\+T\+T\+ON P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a75a66fd768e6c8ba758f5a6ed7058b6b}\label{pconfig_8h_a75a66fd768e6c8ba758f5a6ed7058b6b}} 
+\#define \mbox{\hyperlink{pconfig_8h_a75a66fd768e6c8ba758f5a6ed7058b6b}{I\+N\+C\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+IN}}~4
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+R\+E\+M\+E\+NT B\+U\+T\+T\+ON P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_abeedd1bfa477de94edbbadc712d9b126}\label{pconfig_8h_abeedd1bfa477de94edbbadc712d9b126}} 
+\#define \mbox{\hyperlink{pconfig_8h_abeedd1bfa477de94edbbadc712d9b126}{I\+N\+C\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+T\+R\+IS}}~T\+R\+I\+SB
+\begin{DoxyCompactList}\small\item\em I\+N\+C\+R\+E\+M\+E\+NT B\+U\+T\+T\+ON T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a8a89c7c4e04f6bc1b2553b4cda8830a9}\label{pconfig_8h_a8a89c7c4e04f6bc1b2553b4cda8830a9}} 
+\#define \mbox{\hyperlink{pconfig_8h_a8a89c7c4e04f6bc1b2553b4cda8830a9}{D\+E\+C\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+O\+RT}}~P\+O\+R\+TB
+\begin{DoxyCompactList}\small\item\em D\+E\+C\+R\+E\+M\+E\+NT B\+U\+T\+T\+ON P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a802b1b835f6079d281c7c4efabea0197}\label{pconfig_8h_a802b1b835f6079d281c7c4efabea0197}} 
+\#define \mbox{\hyperlink{pconfig_8h_a802b1b835f6079d281c7c4efabea0197}{D\+E\+C\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+IN}}~5
+\begin{DoxyCompactList}\small\item\em D\+E\+C\+R\+E\+M\+E\+NT B\+U\+T\+T\+ON P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a6f98a4e0e7987d3f8ff8591714351d5b}\label{pconfig_8h_a6f98a4e0e7987d3f8ff8591714351d5b}} 
+\#define \mbox{\hyperlink{pconfig_8h_a6f98a4e0e7987d3f8ff8591714351d5b}{D\+E\+C\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+T\+R\+IS}}~T\+R\+I\+SB
+\begin{DoxyCompactList}\small\item\em D\+E\+C\+R\+E\+M\+E\+NT B\+U\+T\+T\+ON T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_aa719ff5f0789b76487706b79ece0d555}\label{pconfig_8h_aa719ff5f0789b76487706b79ece0d555}} 
+\#define \mbox{\hyperlink{pconfig_8h_aa719ff5f0789b76487706b79ece0d555}{O\+N\+F\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+O\+RT}}~P\+O\+R\+TB
+\begin{DoxyCompactList}\small\item\em O\+N/\+O\+FF B\+U\+T\+T\+ON P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a8cc2ed3d7ee6ad280aa6455defae5645}\label{pconfig_8h_a8cc2ed3d7ee6ad280aa6455defae5645}} 
+\#define \mbox{\hyperlink{pconfig_8h_a8cc2ed3d7ee6ad280aa6455defae5645}{O\+N\+F\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+IN}}~3
+\begin{DoxyCompactList}\small\item\em O\+N/\+O\+FF B\+U\+T\+T\+ON P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a9a5fdbe85b4714be0d55cee8eef83e5f}\label{pconfig_8h_a9a5fdbe85b4714be0d55cee8eef83e5f}} 
+\#define \mbox{\hyperlink{pconfig_8h_a9a5fdbe85b4714be0d55cee8eef83e5f}{O\+N\+F\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+T\+R\+IS}}~T\+R\+I\+SB
+\begin{DoxyCompactList}\small\item\em O\+N/\+O\+FF B\+U\+T\+T\+ON T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a629919dedff4885a67de3313d8af3dde}\label{pconfig_8h_a629919dedff4885a67de3313d8af3dde}} 
+\#define \mbox{\hyperlink{pconfig_8h_a629919dedff4885a67de3313d8af3dde}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+O\+RT}}~P\+O\+R\+TB
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER L\+ED P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}\label{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}} 
+\#define \mbox{\hyperlink{pconfig_8h_ae3b6fbfc912b96f4647cb6141ccfac2b}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+P\+IN}}~7
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER L\+ED P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a366280321dfd6c54891ec53b93f4856f}\label{pconfig_8h_a366280321dfd6c54891ec53b93f4856f}} 
+\#define \mbox{\hyperlink{pconfig_8h_a366280321dfd6c54891ec53b93f4856f}{H\+E\+A\+T\+\_\+\+L\+E\+D\+\_\+\+T\+R\+IS}}~T\+R\+I\+SB
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER L\+ED T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_acae9a875105ae54eb0ad548764b62d4f}\label{pconfig_8h_acae9a875105ae54eb0ad548764b62d4f}} 
+\#define \mbox{\hyperlink{pconfig_8h_acae9a875105ae54eb0ad548764b62d4f}{C\+O\+O\+L\+E\+R\+\_\+\+P\+O\+RT}}~P\+O\+R\+TC
+\begin{DoxyCompactList}\small\item\em C\+O\+O\+L\+ER P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_adfe1f74b9b042cc157ab68763722cce1}\label{pconfig_8h_adfe1f74b9b042cc157ab68763722cce1}} 
+\#define \mbox{\hyperlink{pconfig_8h_adfe1f74b9b042cc157ab68763722cce1}{C\+O\+O\+L\+E\+R\+\_\+\+T\+R\+IS}}~T\+R\+I\+SC
+\begin{DoxyCompactList}\small\item\em C\+O\+O\+L\+ER T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a1e6be812dc6a353e52feaca743f7e080}\label{pconfig_8h_a1e6be812dc6a353e52feaca743f7e080}} 
+\#define \mbox{\hyperlink{pconfig_8h_a1e6be812dc6a353e52feaca743f7e080}{C\+O\+O\+L\+E\+R\+\_\+\+P\+IN}}~2
+\begin{DoxyCompactList}\small\item\em C\+O\+O\+L\+ER P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a1db33a00438416c3840fc776dada6448}\label{pconfig_8h_a1db33a00438416c3840fc776dada6448}} 
+\#define \mbox{\hyperlink{pconfig_8h_a1db33a00438416c3840fc776dada6448}{H\+E\+A\+T\+E\+R\+\_\+\+P\+O\+RT}}~P\+O\+R\+TC
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER P\+O\+RT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a02e1670c729f1306d7598ff1b07c3a68}\label{pconfig_8h_a02e1670c729f1306d7598ff1b07c3a68}} 
+\#define \mbox{\hyperlink{pconfig_8h_a02e1670c729f1306d7598ff1b07c3a68}{H\+E\+A\+T\+E\+R\+\_\+\+T\+R\+IS}}~T\+R\+I\+SC
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER T\+R\+IS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a1a4cece415ae7d43099dae4ff8b8a31c}\label{pconfig_8h_a1a4cece415ae7d43099dae4ff8b8a31c}} 
+\#define \mbox{\hyperlink{pconfig_8h_a1a4cece415ae7d43099dae4ff8b8a31c}{H\+E\+A\+T\+E\+R\+\_\+\+P\+IN}}~5
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER P\+IN N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ac4b09fccb7c3c2ae4360ba6d462670dc}\label{pconfig_8h_ac4b09fccb7c3c2ae4360ba6d462670dc}} 
+\#define {\bfseries O\+N\+\_\+\+S\+T\+A\+TE}~1
+\item 
+\mbox{\Hypertarget{pconfig_8h_a45c78a31d0a9cfbd3878e77c43e2cd6e}\label{pconfig_8h_a45c78a31d0a9cfbd3878e77c43e2cd6e}} 
+\#define {\bfseries O\+F\+F\+\_\+\+S\+T\+A\+TE}~0
+\item 
+\mbox{\Hypertarget{pconfig_8h_aa045b6864425ecb90f2c253e8440d21c}\label{pconfig_8h_aa045b6864425ecb90f2c253e8440d21c}} 
+\#define {\bfseries N\+O\+R\+M\+A\+L\+\_\+\+M\+O\+DE}~1
+\item 
+\mbox{\Hypertarget{pconfig_8h_aaa019a7dce1e90417993e36be4d1eacf}\label{pconfig_8h_aaa019a7dce1e90417993e36be4d1eacf}} 
+\#define {\bfseries T\+E\+M\+P\+\_\+\+S\+E\+T\+T\+I\+N\+G\+\_\+\+M\+O\+DE}~2
+\item 
+\mbox{\Hypertarget{pconfig_8h_ae573e39d21efb9429c66ed40238fd6b4}\label{pconfig_8h_ae573e39d21efb9429c66ed40238fd6b4}} 
+\#define {\bfseries P\+W\+R\+\_\+\+O\+FF}~1
+\item 
+\mbox{\Hypertarget{pconfig_8h_ace895878ac0c9c05686a269a095033c8}\label{pconfig_8h_ace895878ac0c9c05686a269a095033c8}} 
+\#define {\bfseries P\+W\+R\+\_\+\+ON}~2
+\item 
+\mbox{\Hypertarget{pconfig_8h_a2ad1ae959a6fcd118657a03f83302825}\label{pconfig_8h_a2ad1ae959a6fcd118657a03f83302825}} 
+\#define \mbox{\hyperlink{pconfig_8h_a2ad1ae959a6fcd118657a03f83302825}{W\+D\+T\+\_\+\+P\+O\+S\+T\+S\+C\+A\+L\+ER}}~0\+B100
+\begin{DoxyCompactList}\small\item\em P\+O\+S\+T\+S\+C\+A\+L\+ER V\+A\+L\+UE F\+OR T\+HE W\+A\+T\+C\+H\+D\+OG 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a44c0ca42371a000524a799a5406a896a}\label{pconfig_8h_a44c0ca42371a000524a799a5406a896a}} 
+\#define \mbox{\hyperlink{pconfig_8h_a44c0ca42371a000524a799a5406a896a}{T\+I\+M\+E\+R2\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+V\+AL}}~0\+X\+FF
+\begin{DoxyCompactList}\small\item\em T\+I\+M\+E\+R2 C\+O\+M\+P\+A\+RE M\+A\+T\+CH V\+A\+L\+UE ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a6bc37cdd51aca80b254249ef3cdcaaa9}\label{pconfig_8h_a6bc37cdd51aca80b254249ef3cdcaaa9}} 
+\#define \mbox{\hyperlink{pconfig_8h_a6bc37cdd51aca80b254249ef3cdcaaa9}{T\+I\+M\+E\+R2\+\_\+\+O\+U\+T\+\_\+\+S\+C\+A\+L\+ER}}~0\+B0100
+\begin{DoxyCompactList}\small\item\em O\+U\+T\+S\+C\+A\+L\+ER F\+OR T\+HE T\+I\+M\+E\+R2 C\+L\+O\+CK S\+O\+U\+R\+CE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a862f2b2c76a87f6f1ba304cc33ad8ed2}\label{pconfig_8h_a862f2b2c76a87f6f1ba304cc33ad8ed2}} 
+\#define \mbox{\hyperlink{pconfig_8h_a862f2b2c76a87f6f1ba304cc33ad8ed2}{T\+I\+M\+E\+R2\+\_\+\+I\+N\+\_\+\+S\+C\+A\+L\+ER}}~0\+B11
+\begin{DoxyCompactList}\small\item\em IN S\+C\+A\+L\+ER F\+OR T\+HE T\+I\+M\+E\+R2 C\+L\+O\+CK S\+O\+U\+R\+CE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ac6717de232fe275e9c3f3a0b58c55323}\label{pconfig_8h_ac6717de232fe275e9c3f3a0b58c55323}} 
+\#define \mbox{\hyperlink{pconfig_8h_ac6717de232fe275e9c3f3a0b58c55323}{T\+I\+M\+E\+R1\+\_\+\+I\+N\+\_\+\+S\+C\+A\+L\+ER}}~0\+B00
+\begin{DoxyCompactList}\small\item\em IN S\+C\+A\+L\+ER F\+OR T\+HE T\+I\+M\+E\+R1 C\+L\+O\+CK S\+O\+U\+R\+CE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_acd5d8626abcd19eec72db7e0c1a0b87e}\label{pconfig_8h_acd5d8626abcd19eec72db7e0c1a0b87e}} 
+\#define \mbox{\hyperlink{pconfig_8h_acd5d8626abcd19eec72db7e0c1a0b87e}{T\+I\+M\+E\+R1\+\_\+\+S\+Y\+N\+CH}}~1
+\begin{DoxyCompactList}\small\item\em T\+I\+M\+E\+R1 S\+Y\+N\+CH B\+IT F\+I\+E\+LD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a94a1fee13f6d68c038d543fc3d56714b}\label{pconfig_8h_a94a1fee13f6d68c038d543fc3d56714b}} 
+\#define \mbox{\hyperlink{pconfig_8h_a94a1fee13f6d68c038d543fc3d56714b}{T\+I\+M\+E\+R1\+\_\+\+S\+RC}}~0
+\begin{DoxyCompactList}\small\item\em T\+I\+M\+E\+R1 S\+O\+U\+R\+CE B\+IT F\+I\+E\+LD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a4f866cd12d0a43d82f68ad1489b4c0e0}\label{pconfig_8h_a4f866cd12d0a43d82f68ad1489b4c0e0}} 
+\#define \mbox{\hyperlink{pconfig_8h_a4f866cd12d0a43d82f68ad1489b4c0e0}{T\+I\+M\+E\+R1\+\_\+\+O\+S\+C\+EN}}~1
+\begin{DoxyCompactList}\small\item\em T\+I\+M\+E\+R1 O\+S\+C\+EN B\+IT F\+I\+E\+LD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_aed8ea54a2630aaf2ae3f2bd5fa886959}\label{pconfig_8h_aed8ea54a2630aaf2ae3f2bd5fa886959}} 
+\#define \mbox{\hyperlink{pconfig_8h_aed8ea54a2630aaf2ae3f2bd5fa886959}{M\+A\+X\+\_\+\+T\+E\+MP}}~75
+\begin{DoxyCompactList}\small\item\em M\+AX A\+L\+L\+O\+W\+ED T\+E\+MP. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a2522d2568f63855838c3ecfb44084710}\label{pconfig_8h_a2522d2568f63855838c3ecfb44084710}} 
+\#define \mbox{\hyperlink{pconfig_8h_a2522d2568f63855838c3ecfb44084710}{M\+I\+N\+\_\+\+T\+E\+MP}}~35
+\begin{DoxyCompactList}\small\item\em M\+IN A\+L\+L\+O\+W\+ED T\+E\+MP. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a12059ce786a2a18f6fe93cbddf02bd9d}\label{pconfig_8h_a12059ce786a2a18f6fe93cbddf02bd9d}} 
+\#define \mbox{\hyperlink{pconfig_8h_a12059ce786a2a18f6fe93cbddf02bd9d}{S\+T\+E\+P\+\_\+\+T\+E\+MP}}~5
+\begin{DoxyCompactList}\small\item\em T\+E\+M\+P\+E\+R\+A\+T\+U\+RE S\+T\+EP P\+ER ++ ,--. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a8559a88183e8107e7f77461e72fca248}\label{pconfig_8h_a8559a88183e8107e7f77461e72fca248}} 
+\#define \mbox{\hyperlink{pconfig_8h_a8559a88183e8107e7f77461e72fca248}{config\+F\+O\+SC}}
+\begin{DoxyCompactList}\small\item\em Oscillator Selection bits (HS oscillator) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_af914a1a7f114abfb5acfde553a7207ff}\label{pconfig_8h_af914a1a7f114abfb5acfde553a7207ff}} 
+\#define \mbox{\hyperlink{pconfig_8h_af914a1a7f114abfb5acfde553a7207ff}{config\+W\+D\+TE}}
+\begin{DoxyCompactList}\small\item\em Watchdog Timer Enable bit (W\+DT enabled) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a9f0a929803abed2a99fbd8cb6b0df2c7}\label{pconfig_8h_a9f0a929803abed2a99fbd8cb6b0df2c7}} 
+\#define \mbox{\hyperlink{pconfig_8h_a9f0a929803abed2a99fbd8cb6b0df2c7}{config\+P\+W\+R\+TE}}
+\begin{DoxyCompactList}\small\item\em Power-\/up Timer Enable bit (P\+W\+RT disabled) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ae2e30acf2e94912a5c594e189e53d85b}\label{pconfig_8h_ae2e30acf2e94912a5c594e189e53d85b}} 
+\#define \mbox{\hyperlink{pconfig_8h_ae2e30acf2e94912a5c594e189e53d85b}{config\+B\+O\+R\+EN}}
+\begin{DoxyCompactList}\small\item\em Brown-\/out Reset Enable bit (B\+OR enabled) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ae7981f4cd8bbecd77cfcc04fcf108d2f}\label{pconfig_8h_ae7981f4cd8bbecd77cfcc04fcf108d2f}} 
+\#define \mbox{\hyperlink{pconfig_8h_ae7981f4cd8bbecd77cfcc04fcf108d2f}{config\+L\+VP}}
+\begin{DoxyCompactList}\small\item\em Low-\/\+Voltage (Single-\/\+Supply) In-\/\+Circuit Serial Programming Enable bit (R\+B3 is digital I/O, HV on M\+C\+LR must be used for programming) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_af77065596d99fa814835e9f1968668a1}\label{pconfig_8h_af77065596d99fa814835e9f1968668a1}} 
+\#define \mbox{\hyperlink{pconfig_8h_af77065596d99fa814835e9f1968668a1}{config\+C\+PD}}
+\begin{DoxyCompactList}\small\item\em Data E\+E\+P\+R\+OM Memory Code Protection bit (Data E\+E\+P\+R\+OM code protection off) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a2c16deec13c633dec3d9654bca731593}\label{pconfig_8h_a2c16deec13c633dec3d9654bca731593}} 
+\#define \mbox{\hyperlink{pconfig_8h_a2c16deec13c633dec3d9654bca731593}{config\+W\+RT}}
+\begin{DoxyCompactList}\small\item\em Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by E\+E\+C\+ON control) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a3ada0ce48598d3649052a86eff85f886}\label{pconfig_8h_a3ada0ce48598d3649052a86eff85f886}} 
+\#define \mbox{\hyperlink{pconfig_8h_a3ada0ce48598d3649052a86eff85f886}{config\+CP}}
+\begin{DoxyCompactList}\small\item\em Flash Program Memory Code Protection bit (Code protection off) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ac80a3592e72fd96b772ee47a7d8e0d0a}\label{pconfig_8h_ac80a3592e72fd96b772ee47a7d8e0d0a}} 
+\#define \mbox{\hyperlink{pconfig_8h_ac80a3592e72fd96b772ee47a7d8e0d0a}{D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}}~1
+\begin{DoxyCompactList}\small\item\em IF D\+E\+F\+I\+N\+ED IT W\+I\+LL A\+L\+L\+OW A\+S\+S\+E\+R\+T\+I\+ON OF P\+A\+R\+A\+M\+E\+T\+E\+RS P\+A\+S\+S\+ED TO I\+N\+IT F\+U\+N\+C\+T\+I\+O\+NS , I\+N\+IT F\+U\+N\+C\+T\+I\+ON R\+E\+T\+U\+RN -\/1 ON F\+A\+IL IF U\+N\+D\+E\+F\+I\+N\+ED NO A\+S\+S\+E\+R\+T\+I\+ON IS T\+A\+K\+ES P\+L\+A\+CE A\+ND I\+N\+IT F\+U\+N\+C\+T\+I\+O\+NS R\+E\+T\+U\+RN 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pconfig_8h_a4d03b7f870a70e26bc187e1c9d671cde}\label{pconfig_8h_a4d03b7f870a70e26bc187e1c9d671cde}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_a4d03b7f870a70e26bc187e1c9d671cde}{device\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em D\+E\+V\+I\+CE S\+T\+A\+TE O\+N/\+O\+FF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_ad523cb8e244064ba1ebaa3105319ab2a}\label{pconfig_8h_ad523cb8e244064ba1ebaa3105319ab2a}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_ad523cb8e244064ba1ebaa3105319ab2a}{desired\+\_\+temp}}
+\begin{DoxyCompactList}\small\item\em D\+E\+S\+I\+R\+ED T\+E\+M\+P\+E\+R\+A\+T\+U\+RE T\+HE U\+S\+ER S\+E\+TS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a151b9b59f4891758ffb96ace64b78d50}\label{pconfig_8h_a151b9b59f4891758ffb96ace64b78d50}} 
+volatile uint16\+\_\+t \mbox{\hyperlink{pconfig_8h_a151b9b59f4891758ffb96ace64b78d50}{average\+\_\+temp}}
+\begin{DoxyCompactList}\small\item\em A\+V\+E\+R\+A\+GE T\+E\+M\+P\+E\+R\+A\+T\+U\+RE C\+A\+L\+C\+U\+L\+A\+T\+ED. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a3fbf9d830d61beaa0296858256886b6e}\label{pconfig_8h_a3fbf9d830d61beaa0296858256886b6e}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_a3fbf9d830d61beaa0296858256886b6e}{heater\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em H\+E\+A\+T\+ER S\+T\+A\+TE O\+N/\+O\+FF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_acdae0080a84304fce280d04b311900a3}\label{pconfig_8h_acdae0080a84304fce280d04b311900a3}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_acdae0080a84304fce280d04b311900a3}{cooler\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em C\+O\+O\+L\+ER S\+T\+A\+TE O\+N/\+O\+FF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a6c2486bb33351254c4340aed15a64c55}\label{pconfig_8h_a6c2486bb33351254c4340aed15a64c55}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_a6c2486bb33351254c4340aed15a64c55}{Seg\+\_\+\+Val}}
+\begin{DoxyCompactList}\small\item\em S\+E\+G\+M\+E\+NT V\+A\+L\+UE D\+I\+S\+P\+A\+L\+Y\+ED BY T\+HE 7 S\+E\+G\+M\+E\+N\+TS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_acd9aff97445dc3af771bf5b9eeed9762}\label{pconfig_8h_acd9aff97445dc3af771bf5b9eeed9762}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_acd9aff97445dc3af771bf5b9eeed9762}{display\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em D\+I\+S\+P\+L\+AY S\+T\+A\+TE O\+N/\+O\+FF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a8a9ee2a84bc2bb0760120fcabdae0558}\label{pconfig_8h_a8a9ee2a84bc2bb0760120fcabdae0558}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_a8a9ee2a84bc2bb0760120fcabdae0558}{Current\+\_\+\+Task}}
+\begin{DoxyCompactList}\small\item\em C\+U\+R\+R\+E\+NT T\+A\+KS P\+O\+W\+ER ON / P\+O\+W\+ER O\+FF. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pconfig_8h_a4675587dba7373a42ffe1c190ac12558}\label{pconfig_8h_a4675587dba7373a42ffe1c190ac12558}} 
+volatile uint8\+\_\+t \mbox{\hyperlink{pconfig_8h_a4675587dba7373a42ffe1c190ac12558}{display\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em D\+I\+S\+P\+L\+AY M\+O\+DE , T\+E\+M\+P\+E\+R\+A\+T\+U\+RE S\+E\+T\+T\+I\+NG M\+O\+DE / N\+O\+R\+M\+AL M\+O\+DE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Author \+: Mohamed Yousry Mohamed Rashad . Date \+: 6/29/2020 File \+: \mbox{\hyperlink{pconfig_8h}{pconfig.\+h}} This is a Configuration file for the project it will include port pin mapping definitions . General defines and macros . Application specific constants and so on . 
