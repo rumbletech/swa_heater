@@ -31,7 +31,7 @@ void WriteSegVal ( uint8_t newval )
 
 
 
-void TIMER2_IRQ_Handler( void )
+inline void TIMER2_IRQ_Handler( void )
 {
     
     
@@ -75,7 +75,7 @@ void TIMER2_IRQ_Handler( void )
 
 
 
-void TIMER1_IRQ_Handler( void )
+inline void TIMER1_IRQ_Handler( void )
 {
     
     static uint8_t tim1_ovf_count = 0 ; 
@@ -84,6 +84,7 @@ void TIMER1_IRQ_Handler( void )
     static uint8_t sig_blink_count = 0 ;
     static uint8_t sig_blink_toggle = 0 ;
     static uint8_t temp_enter_counter = 0 ;
+    static uint8_t tst ;
 
     
     
@@ -124,10 +125,11 @@ void TIMER1_IRQ_Handler( void )
              if ( display_mode == NORMAL_MODE  )
             {
                 display_mode = TEMP_SETTING_MODE;temp_enter_counter = 0 ;
+                tst = desired_temp; 
             }
             else if ( display_mode == TEMP_SETTING_MODE && !(desired_temp + STEP_TEMP > MAX_TEMP ) )
             {
-                desired_temp += 5 ;
+                tst += 5 ;
                 temp_enter_counter = 0 ;
             }
          
@@ -145,11 +147,12 @@ void TIMER1_IRQ_Handler( void )
             if ( display_mode == NORMAL_MODE  )
             {
                 display_mode = TEMP_SETTING_MODE;temp_enter_counter = 0 ;
+                tst = desired_temp ; 
                 
             }
             else if ( display_mode == TEMP_SETTING_MODE && !(desired_temp - STEP_TEMP < MIN_TEMP ) )
             {
-                desired_temp -= 5 ;
+                tst -= 5 ;
                 temp_enter_counter = 0 ;
             }
         }
@@ -162,6 +165,8 @@ void TIMER1_IRQ_Handler( void )
        if ( ((++temp_enter_counter) >= 250 ) && display_mode == TEMP_SETTING_MODE )
     {
         display_mode = NORMAL_MODE ; 
+        Current_Task = WRITE_EEP ; 
+        desired_temp = tst ;
         if ( device_state == ON_STATE )
         {
             display_state = ON_STATE ; 
@@ -176,7 +181,7 @@ void TIMER1_IRQ_Handler( void )
             WriteSegVal( average_temp );
         }
         else if ( display_mode == TEMP_SETTING_MODE ){
-         WriteSegVal( desired_temp );   
+         WriteSegVal( tst );   
         }
     }
     
@@ -214,7 +219,7 @@ void TIMER1_IRQ_Handler( void )
 }
 
 
-void ADC_IRQ_Handler ( void )
+inline void ADC_IRQ_Handler ( void )
 {
     static uint16_t temp_rsum = 0 ;
     static uint8_t temp_count = 0 ;
@@ -243,11 +248,11 @@ void ADC_IRQ_Handler ( void )
             //turn on cooler 
             COOLER_ON();cooler_state = ON_STATE;
         }
-    else if ( average_temp > desired_temp && ( average_temp - desired_temp ) > 5 && heater_state == ON_STATE  )
+    else if ( average_temp > desired_temp && ( average_temp - desired_temp ) > 1 && heater_state == ON_STATE  )
     {
         HEATER_OFF();heater_state = OFF_STATE;
     }
-    else if ( average_temp < desired_temp && ( desired_temp - average_temp) >5 && cooler_state == ON_STATE) 
+    else if ( average_temp < desired_temp && ( desired_temp - average_temp) > 1 && cooler_state == ON_STATE) 
     {
        COOLER_OFF();cooler_state = OFF_STATE;
         

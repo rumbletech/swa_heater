@@ -86,8 +86,7 @@ void DisplayInit( void )
     TIMER2_SETUP_60HZ(); 
     
  /* Done */   
-    
- return 0 ;
+
  
 }
 

@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 0 ]
-"22 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/main.c
+"22 C:\Swift-Act Electric Heater\swift_act_proj.X\src/main.c
 [e E1087 . `uc
 ADC_CKSEL_FOSC_DIV2 0
 ADC_CKSEL_FOSC_DIV8 1
@@ -35,7 +35,7 @@ ADC_FMT_RADJ 1
 ADC_FMT_LADJ 0
 ]
 "33
-[e E1132 . `uc
+[e E1136 . `uc
 I2C_MODE_SLAVE_ADDR10_INTEN 15
 I2C_MODE_SLAVE_ADDR7_INTEN 14
 I2C_MODE_MASTER_FIRMWARE_CONTROLLED 11
@@ -43,8 +43,8 @@ I2C_MODE_MASTER_HARDWARE_CONTROLLED 8
 I2C_MODE_SLAVE_ADDR10 7
 I2C_MODE_SLAVE_ADDR7 6
 ]
-"71 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_adc.c
-[e E1128 . `uc
+"115 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_adc.c
+[e E1129 . `uc
 ADC_CKSEL_FOSC_DIV2 0
 ADC_CKSEL_FOSC_DIV8 1
 ADC_CKSEL_FOSC_DIV32 2
@@ -53,7 +53,7 @@ ADC_CKSEL_FOSC_DIV4 4
 ADC_CKSEL_FOSC_DIV16 5
 ADC_CKSEL_FOSC_DIV64 6
 ]
-[e E1137 . `uc
+[e E1138 . `uc
 ADC_PCFG_CR_80 0
 ADC_PCFG_CR_71 1
 ADC_PCFG_CR_50 2
@@ -70,12 +70,12 @@ ADC_PCFG_CR_22 13
 ADC_PCFG_CR_10 14
 ADC_PCFG_CR_12 15
 ]
-[e E1154 . `uc
+[e E1155 . `uc
 ADC_FMT_RADJ 1
 ADC_FMT_LADJ 0
 ]
-"12 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_i2c.c
-[e E1146 . `uc
+"34 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_i2c.c
+[e E1150 . `uc
 I2C_MODE_SLAVE_ADDR10_INTEN 15
 I2C_MODE_SLAVE_ADDR7_INTEN 14
 I2C_MODE_MASTER_FIRMWARE_CONTROLLED 11
@@ -99,52 +99,52 @@ I2C_MODE_SLAVE_ADDR7 6
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"11 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/eep.c
+"30 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/eep.c
 [v _eepByteWrite eepByteWrite `(c  1 e 1 0 ]
-"30
+"56
 [v _eepByteRead eepByteRead `(i  1 e 2 0 ]
-"15 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_adc.c
+"35 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_adc.c
 [v _ADC_ClearFlag ADC_ClearFlag `(v  1 e 1 0 ]
-"20
+"43
 [v _ADC_EnableINT ADC_EnableINT `(v  1 e 1 0 ]
-"46
+"82
 [v _ADC_StartConv_NB ADC_StartConv_NB `(v  1 e 1 0 ]
 [v i1_ADC_StartConv_NB ADC_StartConv_NB `(v  1 e 1 0 ]
-"71
+"115
 [v _ADC_Init ADC_Init `(c  1 e 1 0 ]
-"12 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_i2c.c
+"34 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_i2c.c
 [v _I2C_Init I2C_Init `(c  1 e 1 0 ]
-"65
+"92
 [v _I2C_Halt I2C_Halt `(v  1 e 1 0 ]
-"70
+"100
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-"78
+"109
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"87
+"119
 [v _I2C_Restart I2C_Restart `(v  1 e 1 0 ]
-"95
+"132
 [v _I2C_Transmit I2C_Transmit `(c  1 e 1 0 ]
-"134
+"181
 [v _I2C_Receive_NACK I2C_Receive_NACK `(uc  1 e 1 0 ]
-"21 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_tim1.c
+"28 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_tim1.c
 [v _TIM1_Init TIM1_Init `(v  1 e 1 0 ]
-"46
+"53
 [v _TIMER2_SETUP_60HZ TIMER2_SETUP_60HZ `(v  1 s 1 TIMER2_SETUP_60HZ ]
-"64
-[v _DisplayInit DisplayInit `(c  1 e 1 0 ]
-"7 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/main.c
+"74
+[v _DisplayInit DisplayInit `(v  1 e 1 0 ]
+"7 C:\Swift-Act Electric Heater\swift_act_proj.X\src/main.c
 [v _system_startup system_startup `(v  1 e 1 0 ]
 "72
 [v _main main `(v  1 e 1 0 ]
-"25 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/pic_int.c
+"25 C:\Swift-Act Electric Heater\swift_act_proj.X\src/pic_int.c
 [v _WriteSegVal WriteSegVal `(v  1 e 1 0 ]
 "34
 [v _TIMER2_IRQ_Handler TIMER2_IRQ_Handler `(v  1 e 1 0 ]
 "78
 [v _TIMER1_IRQ_Handler TIMER1_IRQ_Handler `(v  1 e 1 0 ]
-"217
+"222
 [v _ADC_IRQ_Handler ADC_IRQ_Handler `(v  1 e 1 0 ]
-"290
+"295
 [v _ISR ISR `II(v  1 e 1 0 ]
 "59 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -204,7 +204,7 @@ I2C_MODE_SLAVE_ADDR7 6
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "2971
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"13 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/pic_int.c
+"13 C:\Swift-Act Electric Heater\swift_act_proj.X\src/pic_int.c
 [v _device_state device_state `VEuc  1 e 1 0 ]
 "14
 [v _desired_temp desired_temp `VEuc  1 e 1 0 ]
@@ -222,43 +222,43 @@ I2C_MODE_SLAVE_ADDR7 6
 [v _display_mode display_mode `VEuc  1 e 1 0 ]
 "21
 [v _Current_Task Current_Task `VEuc  1 e 1 0 ]
-"72 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/main.c
+"72 C:\Swift-Act Electric Heater\swift_act_proj.X\src/main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "92
-[v main@val val `uc  1 a 1 2 ]
-"135
+[v main@val val `uc  1 a 1 4 ]
+"140
 } 0
 "7
 [v _system_startup system_startup `(v  1 e 1 0 ]
 {
-[s S65 . 9 `E1132 1 I2C_mode 1 0 `uc 1 sla7_addr 1 1 `ui 1 sla10_addr 2 2 `ul 1 I2C_freq 4 4 `uc 1 I2C_Int_Enable 1 8 ]
+[s S65 . 9 `E1136 1 I2C_mode 1 0 `uc 1 sla7_addr 1 1 `ui 1 sla10_addr 2 2 `ul 1 I2C_freq 4 4 `uc 1 I2C_Int_Enable 1 8 ]
 "33
 [v system_startup@my_i2c_s my_i2c_s `S65  1 a 9 35 ]
 [s S51 . 6 `E1087 1 CKSEL_bf 1 0 `E1096 1 PCFG_bf 1 1 `E1113 1 FMT_bf 1 2 `uc 1 CH_sel 1 3 `uc 1 INT_enable 1 4 `uc 1 convStart_Sel 1 5 ]
 "22
 [v system_startup@my_s my_s `S51  1 a 6 29 ]
 "18
-[v system_startup@F1172 F1172 `S51  1 s 6 F1172 ]
+[v system_startup@F1177 F1177 `S51  1 s 6 F1177 ]
 "22
-[v system_startup@F1174 F1174 `S65  1 s 9 F1174 ]
+[v system_startup@F1179 F1179 `S65  1 s 9 F1179 ]
 "67
 } 0
-"21 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_tim1.c
+"28 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_tim1.c
 [v _TIM1_Init TIM1_Init `(v  1 e 1 0 ]
 {
-"38
+"45
 } 0
-"12 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_i2c.c
+"34 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_i2c.c
 [v _I2C_Init I2C_Init `(c  1 e 1 0 ]
 {
-[s S65 . 9 `E1132 1 I2C_mode 1 0 `uc 1 sla7_addr 1 1 `ui 1 sla10_addr 2 2 `ul 1 I2C_freq 4 4 `uc 1 I2C_Int_Enable 1 8 ]
+[s S65 . 9 `E1136 1 I2C_mode 1 0 `uc 1 sla7_addr 1 1 `ui 1 sla10_addr 2 2 `ul 1 I2C_freq 4 4 `uc 1 I2C_Int_Enable 1 8 ]
 [v I2C_Init@i2ch i2ch `*.4S65  1 a 1 wreg ]
 [v I2C_Init@i2ch i2ch `*.4S65  1 a 1 wreg ]
-"16
-"12
+"38
+"34
 [v I2C_Init@i2ch i2ch `*.4S65  1 a 1 24 ]
-"62
+"84
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -272,106 +272,106 @@ I2C_MODE_SLAVE_ADDR7 6
 [v ___lldiv@dividend dividend `ul  1 p 4 10 ]
 "30
 } 0
-"64 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_tim1.c
-[v _DisplayInit DisplayInit `(c  1 e 1 0 ]
+"74 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_tim1.c
+[v _DisplayInit DisplayInit `(v  1 e 1 0 ]
 {
-"82
+"91
 } 0
-"46
+"53
 [v _TIMER2_SETUP_60HZ TIMER2_SETUP_60HZ `(v  1 s 1 TIMER2_SETUP_60HZ ]
 {
-"59
+"66
 } 0
-"71 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_adc.c
+"115 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_adc.c
 [v _ADC_Init ADC_Init `(c  1 e 1 0 ]
 {
 [s S51 . 6 `E1087 1 CKSEL_bf 1 0 `E1096 1 PCFG_bf 1 1 `E1113 1 FMT_bf 1 2 `uc 1 CH_sel 1 3 `uc 1 INT_enable 1 4 `uc 1 convStart_Sel 1 5 ]
 [v ADC_Init@config_s_ptr config_s_ptr `*.4S51  1 a 1 wreg ]
 [v ADC_Init@config_s_ptr config_s_ptr `*.4S51  1 a 1 wreg ]
-"76
-"71
+"120
+"115
 [v ADC_Init@config_s_ptr config_s_ptr `*.4S51  1 a 1 10 ]
-"119
+"163
 } 0
-"46
+"82
 [v _ADC_StartConv_NB ADC_StartConv_NB `(v  1 e 1 0 ]
 {
-"49
+"85
 } 0
-"20
+"43
 [v _ADC_EnableINT ADC_EnableINT `(v  1 e 1 0 ]
 {
-"24
+"47
 } 0
-"15
+"35
 [v _ADC_ClearFlag ADC_ClearFlag `(v  1 e 1 0 ]
 {
-"18
+"38
 } 0
-"11 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/eep.c
+"30 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/eep.c
 [v _eepByteWrite eepByteWrite `(c  1 e 1 0 ]
 {
 [v eepByteWrite@bval bval `uc  1 a 1 wreg ]
-"13
+"32
 [v eepByteWrite@error_check error_check `uc  1 a 1 12 ]
-"11
+"30
 [v eepByteWrite@bval bval `uc  1 a 1 wreg ]
 [v eepByteWrite@Addr Addr `ui  1 p 2 7 ]
-"13
+"32
 [v eepByteWrite@bval bval `uc  1 a 1 11 ]
-"28
+"47
 } 0
-"30
+"56
 [v _eepByteRead eepByteRead `(i  1 e 2 0 ]
 {
-"33
+"59
 [v eepByteRead@error_check error_check `uc  1 a 1 12 ]
-"44
+"70
 [v eepByteRead@temp temp `uc  1 a 1 11 ]
-"30
+"56
 [v eepByteRead@Addr Addr `ui  1 p 2 7 ]
-"57
+"83
 } 0
-"95 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_i2c.c
+"132 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_i2c.c
 [v _I2C_Transmit I2C_Transmit `(c  1 e 1 0 ]
 {
 [v I2C_Transmit@bval bval `uc  1 a 1 wreg ]
 [v I2C_Transmit@bval bval `uc  1 a 1 wreg ]
-"97
+"134
 [v I2C_Transmit@bval bval `uc  1 a 1 6 ]
-"107
+"144
 } 0
-"78
+"109
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
 {
-"84
+"115
 } 0
-"70
+"100
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
 {
-"76
+"106
 } 0
-"87
+"119
 [v _I2C_Restart I2C_Restart `(v  1 e 1 0 ]
 {
-"93
+"125
 } 0
-"134
+"181
 [v _I2C_Receive_NACK I2C_Receive_NACK `(uc  1 e 1 0 ]
 {
-"137
+"184
 [v I2C_Receive_NACK@temp temp `uc  1 a 1 6 ]
-"149
+"196
 } 0
-"65
+"92
 [v _I2C_Halt I2C_Halt `(v  1 e 1 0 ]
 {
-"68
+"95
 } 0
-"290 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/pic_int.c
+"295 C:\Swift-Act Electric Heater\swift_act_proj.X\src/pic_int.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"326
+"331
 } 0
 "34
 [v _TIMER2_IRQ_Handler TIMER2_IRQ_Handler `(v  1 e 1 0 ]
@@ -395,14 +395,16 @@ I2C_MODE_SLAVE_ADDR7 6
 [v TIMER1_IRQ_Handler@sig_blink_toggle sig_blink_toggle `uc  1 s 1 sig_blink_toggle ]
 "86
 [v TIMER1_IRQ_Handler@temp_enter_counter temp_enter_counter `uc  1 s 1 temp_enter_counter ]
-"214
+"87
+[v TIMER1_IRQ_Handler@tst tst `uc  1 s 1 tst ]
+"219
 } 0
-"46 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\Drivers/src/pic_adc.c
+"82 C:\Swift-Act Electric Heater\swift_act_proj.X\Drivers/src/pic_adc.c
 [v i1_ADC_StartConv_NB ADC_StartConv_NB `(v  1 e 1 0 ]
 {
-"49
+"85
 } 0
-"25 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/pic_int.c
+"25 C:\Swift-Act Electric Heater\swift_act_proj.X\src/pic_int.c
 [v _WriteSegVal WriteSegVal `(v  1 e 1 0 ]
 {
 [v WriteSegVal@newval newval `uc  1 a 1 wreg ]
@@ -435,18 +437,18 @@ I2C_MODE_SLAVE_ADDR7 6
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"217 C:\Users\Garmoosh\MPLABXProjects\swift_act_proj.X\src/pic_int.c
+"222 C:\Swift-Act Electric Heater\swift_act_proj.X\src/pic_int.c
 [v _ADC_IRQ_Handler ADC_IRQ_Handler `(v  1 e 1 0 ]
 {
-"219
+"224
 [v ADC_IRQ_Handler@temp_rsum temp_rsum `ui  1 s 2 temp_rsum ]
-"220
+"225
 [v ADC_IRQ_Handler@temp_count temp_count `uc  1 s 1 temp_count ]
-"221
+"226
 [v ADC_IRQ_Handler@heat_led_count heat_led_count `uc  1 s 1 heat_led_count ]
-"222
+"227
 [v ADC_IRQ_Handler@heat_led_toggle heat_led_toggle `uc  1 s 1 heat_led_toggle ]
-"288
+"293
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]

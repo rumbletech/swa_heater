@@ -209,103 +209,99 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"128 Drivers/src/../incl/../../config/pconfig.h
+"185 Drivers/src/../incl/../../config/pconfig.h
 [p x FOSC = HS ]
-"129
+"188
 [p x WDTE = ON ]
-"130
+"191
 [p x PWRTE = OFF ]
-"131
+"194
 [p x BOREN = ON ]
-"132
+"197
 [p x LVP = OFF ]
-"133
+"200
 [p x CPD = OFF ]
-"134
+"203
 [p x WRT = OFF ]
-"135
+"206
 [p x CP = OFF ]
-"21 Drivers/src/pic_tim1.c
-[; ;Drivers/src/pic_tim1.c: 21: void TIM1_Init ( void )
+"28 Drivers/src/pic_tim1.c
+[; ;Drivers/src/pic_tim1.c: 28: void TIM1_Init ( void )
 [v _TIM1_Init `(v ~T0 @X0 1 ef ]
-"22
-[; ;Drivers/src/pic_tim1.c: 22: {
+"29
+[; ;Drivers/src/pic_tim1.c: 29: {
 {
 [e :U _TIM1_Init ]
 [f ]
-"25
-[; ;Drivers/src/pic_tim1.c: 25:     PIR1 &= ~ ( 1 << 0x0 );
-[e =& _PIR1 -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"27
-[; ;Drivers/src/pic_tim1.c: 27:     PIE1 |= ( 1 << 0x0 );
-[e =| _PIE1 -> << -> 1 `i -> 0 `i `Vuc ]
-"29
-[; ;Drivers/src/pic_tim1.c: 29:     TMR1L = 0 ;
-[e = _TMR1L -> -> 0 `i `uc ]
-"30
-[; ;Drivers/src/pic_tim1.c: 30:     TMR1H = 0 ;
-[e = _TMR1H -> -> 0 `i `uc ]
 "32
-[; ;Drivers/src/pic_tim1.c: 32:     T1CON = (( 0B00 << 0x4 ) |
+[; ;Drivers/src/pic_tim1.c: 32:     PIR1 &= ~ ( 1 << 0x0 );
+[e =& _PIR1 -> ~ << -> 1 `i -> 0 `i `Vuc ]
+"34
+[; ;Drivers/src/pic_tim1.c: 34:     PIE1 |= ( 1 << 0x0 );
+[e =| _PIE1 -> << -> 1 `i -> 0 `i `Vuc ]
+"36
+[; ;Drivers/src/pic_tim1.c: 36:     TMR1L = 0 ;
+[e = _TMR1L -> -> 0 `i `uc ]
+"37
+[; ;Drivers/src/pic_tim1.c: 37:     TMR1H = 0 ;
+[e = _TMR1H -> -> 0 `i `uc ]
+"39
+[; ;Drivers/src/pic_tim1.c: 39:     T1CON = (( 0B00 << 0x4 ) |
 [e = _T1CON -> | | | | << -> 0 `i -> 4 `i << -> 0 `i -> 1 `i << -> 1 `i -> 2 `i << -> 1 `i -> 3 `i << -> 1 `i -> 0 `i `uc ]
-"38
-[; ;Drivers/src/pic_tim1.c: 38: }
+"45
+[; ;Drivers/src/pic_tim1.c: 45: }
 [e :UE 101 ]
 }
-"46
-[; ;Drivers/src/pic_tim1.c: 46: static void TIMER2_SETUP_60HZ ( void )
+"53
+[; ;Drivers/src/pic_tim1.c: 53: static void TIMER2_SETUP_60HZ ( void )
 [v _TIMER2_SETUP_60HZ `(v ~T0 @X0 1 sf ]
-"47
-[; ;Drivers/src/pic_tim1.c: 47: {
+"54
+[; ;Drivers/src/pic_tim1.c: 54: {
 {
 [e :U _TIMER2_SETUP_60HZ ]
 [f ]
-"49
-[; ;Drivers/src/pic_tim1.c: 49:     PIR1 &= ~ ( 1 << 0x1 );
+"56
+[; ;Drivers/src/pic_tim1.c: 56:     PIR1 &= ~ ( 1 << 0x1 );
 [e =& _PIR1 -> ~ << -> 1 `i -> 1 `i `Vuc ]
-"51
-[; ;Drivers/src/pic_tim1.c: 51:     PIE1 |= ( 1 << 0x1 );
+"58
+[; ;Drivers/src/pic_tim1.c: 58:     PIE1 |= ( 1 << 0x1 );
 [e =| _PIE1 -> << -> 1 `i -> 1 `i `Vuc ]
-"53
-[; ;Drivers/src/pic_tim1.c: 53:     PR2 = 0XFF ;
+"60
+[; ;Drivers/src/pic_tim1.c: 60:     PR2 = 0XFF ;
 [e = _PR2 -> -> 255 `i `uc ]
-"55
-[; ;Drivers/src/pic_tim1.c: 55:     T2CON = (( 0B0100 << 0x3 )| ( 0B11 << 0x0 ) |
+"62
+[; ;Drivers/src/pic_tim1.c: 62:     T2CON = (( 0B0100 << 0x3 )| ( 0B11 << 0x0 ) |
 [e = _T2CON -> | | << -> 4 `i -> 3 `i << -> 3 `i -> 0 `i << -> 1 `i -> 2 `i `uc ]
-"59
-[; ;Drivers/src/pic_tim1.c: 59: }
+"66
+[; ;Drivers/src/pic_tim1.c: 66: }
 [e :UE 102 ]
 }
-"64
-[; ;Drivers/src/pic_tim1.c: 64: int8_t DisplayInit( void )
-[v _DisplayInit `(c ~T0 @X0 1 ef ]
-"65
-[; ;Drivers/src/pic_tim1.c: 65: {
+"74
+[; ;Drivers/src/pic_tim1.c: 74: void DisplayInit( void )
+[v _DisplayInit `(v ~T0 @X0 1 ef ]
+"75
+[; ;Drivers/src/pic_tim1.c: 75: {
 {
 [e :U _DisplayInit ]
 [f ]
-"69
-[; ;Drivers/src/pic_tim1.c: 69:     TRISD = 0 ;
+"79
+[; ;Drivers/src/pic_tim1.c: 79:     TRISD = 0 ;
 [e = _TRISD -> -> 0 `i `uc ]
-"70
-[; ;Drivers/src/pic_tim1.c: 70:     TRISA &= ~ ( 1 << 5 );
+"80
+[; ;Drivers/src/pic_tim1.c: 80:     TRISA &= ~ ( 1 << 5 );
 [e =& _TRISA -> ~ << -> 1 `i -> 5 `i `Vuc ]
-"71
-[; ;Drivers/src/pic_tim1.c: 71:     TRISA &= ~ ( 1 << 4 );
+"81
+[; ;Drivers/src/pic_tim1.c: 81:     TRISA &= ~ ( 1 << 4 );
 [e =& _TRISA -> ~ << -> 1 `i -> 4 `i `Vuc ]
-"72
-[; ;Drivers/src/pic_tim1.c: 72:     T2CON&= ~ ( 1 << 0x2 ); PORTA &= ~( 1 << 5 ); PORTA &= ~ ( 1 << 4 );
+"82
+[; ;Drivers/src/pic_tim1.c: 82:     T2CON&= ~ ( 1 << 0x2 ); PORTA &= ~( 1 << 5 ); PORTA &= ~ ( 1 << 4 );
 [e =& _T2CON -> ~ << -> 1 `i -> 2 `i `Vuc ]
 [e =& _PORTA -> ~ << -> 1 `i -> 5 `i `Vuc ]
 [e =& _PORTA -> ~ << -> 1 `i -> 4 `i `Vuc ]
-"76
-[; ;Drivers/src/pic_tim1.c: 76:     TIMER2_SETUP_60HZ();
+"86
+[; ;Drivers/src/pic_tim1.c: 86:     TIMER2_SETUP_60HZ();
 [e ( _TIMER2_SETUP_60HZ ..  ]
-"80
-[; ;Drivers/src/pic_tim1.c: 80:  return 0 ;
-[e ) -> -> 0 `i `c ]
-[e $UE 103  ]
-"82
-[; ;Drivers/src/pic_tim1.c: 82: }
+"91
+[; ;Drivers/src/pic_tim1.c: 91: }
 [e :UE 103 ]
 }

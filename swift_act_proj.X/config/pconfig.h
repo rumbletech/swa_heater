@@ -28,7 +28,6 @@
 #include <string.h>
 // Drivers Section
 #include "../Drivers/incl/pic_adc.h"
-#include "../Drivers/incl/Seg_Dis.h"
 #include "../Drivers/incl/pic_tim1.h"
 #include "../Drivers/incl/pic_i2c.h"
 #include "../Drivers/incl/eep.h"
@@ -153,6 +152,7 @@
 //VALUES OF SOME TASKS
 #define PWR_OFF 1
 #define PWR_ON  2
+#define WRITE_EEP 3
 
 
 /* Constants */

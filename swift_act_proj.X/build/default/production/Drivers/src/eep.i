@@ -7,15 +7,11 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Drivers/src/eep.c" 2
-
-
-
-
-
+# 20 "Drivers/src/eep.c"
 # 1 "Drivers/src/../incl/eep.h" 1
-# 13 "Drivers/src/../incl/eep.h"
+# 21 "Drivers/src/../incl/eep.h"
 # 1 "Drivers/src/../incl/../../config/pconfig.h" 1
-# 21 "Drivers/src/../incl/../../config/pconfig.h"
+# 24 "Drivers/src/../incl/../../config/pconfig.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1725,7 +1721,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 21 "Drivers/src/../incl/../../config/pconfig.h" 2
+# 24 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
@@ -1861,7 +1857,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 23 "Drivers/src/../incl/../../config/pconfig.h" 2
+# 26 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -1954,7 +1950,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 24 "Drivers/src/../incl/../../config/pconfig.h" 2
+# 27 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\string.h" 3
@@ -1987,13 +1983,15 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 25 "Drivers/src/../incl/../../config/pconfig.h" 2
+# 28 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 
 # 1 "Drivers/src/../incl/../../config/../Drivers/incl/pic_adc.h" 1
-# 16 "Drivers/src/../incl/../../config/../Drivers/incl/pic_adc.h"
+# 21 "Drivers/src/../incl/../../config/../Drivers/incl/pic_adc.h"
 # 1 "Drivers/src/../incl/../../config/pconfig.h" 1
-# 16 "Drivers/src/../incl/../../config/../Drivers/incl/pic_adc.h" 2
+# 21 "Drivers/src/../incl/../../config/../Drivers/incl/pic_adc.h" 2
+
+
 
 
 
@@ -2067,32 +2065,36 @@ typedef struct {
    uint8_t convStart_Sel ;
 
 } ADC_Config_S , * ADC_Config_SP ;
+# 104 "Drivers/src/../incl/../../config/../Drivers/incl/pic_adc.h"
+uint8_t ADC_GetFlag ( void );
 
+void ADC_ClearFlag ( void );
 
+void ADC_EnableINT ( void );
 
-
+void ADC_DisableINT( void );
 
 int8_t ADC_Init ( ADC_Config_S * config_s_ptr ) ;
-uint16_t ADC_StartConv_B ( void );
-void ADC_StartConv_NB( void );
-# 27 "Drivers/src/../incl/../../config/pconfig.h" 2
 
-# 1 "Drivers/src/../incl/../../config/../Drivers/incl/Seg_Dis.h" 1
-# 28 "Drivers/src/../incl/../../config/pconfig.h" 2
+uint16_t ADC_StartConv_B ( void );
+
+void ADC_StartConv_NB( void );
+# 30 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 # 1 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h" 1
-# 21 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h"
+# 28 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h"
 # 1 "Drivers/src/../incl/../../config/pconfig.h" 1
-# 21 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h" 2
-# 46 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h"
+# 28 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h" 2
+# 60 "Drivers/src/../incl/../../config/../Drivers/incl/pic_tim1.h"
 void TIM1_Init ( void );
-int8_t DisplayInit ( void ) ;
-# 29 "Drivers/src/../incl/../../config/pconfig.h" 2
+
+void DisplayInit ( void ) ;
+# 31 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 # 1 "Drivers/src/../incl/../../config/../Drivers/incl/pic_i2c.h" 1
-# 17 "Drivers/src/../incl/../../config/../Drivers/incl/pic_i2c.h"
+# 20 "Drivers/src/../incl/../../config/../Drivers/incl/pic_i2c.h"
 # 1 "Drivers/src/../incl/../../config/pconfig.h" 1
-# 17 "Drivers/src/../incl/../../config/../Drivers/incl/pic_i2c.h" 2
+# 20 "Drivers/src/../incl/../../config/../Drivers/incl/pic_i2c.h" 2
 
 
 
@@ -2107,6 +2109,8 @@ typedef enum
 
 
 } I2C_MODE_ET ;
+
+
 
 typedef struct {
 
@@ -2124,44 +2128,71 @@ typedef struct {
 } I2C_Config_S , * I2C_Config_SP ;
 
 
+
+
 int8_t I2C_Init ( I2C_Config_S* i2ch );
+
+void I2C_Halt ( void );
+
 void I2C_Start ( void );
+
 void I2C_Stop ( void );
+
 void I2C_Restart ( void );
+
 int8_t I2C_Transmit( uint8_t bval );
+
 uint8_t I2C_Receive_ACK ( void );
+
 uint8_t I2C_Receive_NACK ( void );
-# 30 "Drivers/src/../incl/../../config/pconfig.h" 2
+# 32 "Drivers/src/../incl/../../config/pconfig.h" 2
 
 # 1 "Drivers/src/../incl/../../config/../Drivers/incl/eep.h" 1
-# 31 "Drivers/src/../incl/../../config/pconfig.h" 2
-# 128 "Drivers/src/../incl/../../config/pconfig.h"
+# 33 "Drivers/src/../incl/../../config/pconfig.h" 2
+# 185 "Drivers/src/../incl/../../config/pconfig.h"
 #pragma config FOSC = HS
+
+
 #pragma config WDTE = ON
+
+
 #pragma config PWRTE = OFF
+
+
 #pragma config BOREN = ON
+
+
 #pragma config LVP = OFF
+
+
 #pragma config CPD = OFF
+
+
 #pragma config WRT = OFF
+
+
 #pragma config CP = OFF
-
-
-
-
-
-
-
-
+# 216 "Drivers/src/../incl/../../config/pconfig.h"
 extern volatile uint8_t device_state ;
+
 extern volatile uint8_t desired_temp ;
+
 extern volatile uint16_t average_temp ;
+
 extern volatile uint8_t heater_state ;
+
 extern volatile uint8_t cooler_state ;
+
 extern volatile uint8_t Seg_Val ;
+
 extern volatile uint8_t display_state ;
+
 extern volatile uint8_t Current_Task ;
+
 extern volatile uint8_t display_mode ;
-# 13 "Drivers/src/../incl/../../config/../Drivers/incl/eep.h" 2
+# 21 "Drivers/src/../incl/../../config/../Drivers/incl/eep.h" 2
+
+
 
 
 
@@ -2169,13 +2200,10 @@ extern volatile uint8_t display_mode ;
 
 
 int8_t eepByteWrite( uint8_t bval , uint16_t Addr );
+
 int16_t eepByteRead( uint16_t Addr );
-# 6 "Drivers/src/eep.c" 2
-
-
-
-
-
+# 20 "Drivers/src/eep.c" 2
+# 30 "Drivers/src/eep.c"
 int8_t eepByteWrite( uint8_t bval , uint16_t Addr )
 {
     uint8_t error_check = 0 ;
@@ -2194,7 +2222,7 @@ int8_t eepByteWrite( uint8_t bval , uint16_t Addr )
 
     return -1 ;
 }
-
+# 56 "Drivers/src/eep.c"
  int16_t eepByteRead( uint16_t Addr )
  {
 

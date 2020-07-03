@@ -13,17 +13,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E1096 . ADC_PCFG_CR_80 ADC_PCFG_CR_71 ADC_PCFG_CR_50 ADC_PCFG_CR_41 ADC_PCFG_CR_30 ADC_PCFG_CR_21 ADC_PCFG_CR_00 ADC_PCFG_CR_62 ADC_PCFG_CR_60 ADC_PCFG_CR_51 ADC_PCFG_CR_42 ADC_PCFG_CR_32 ADC_PCFG_CR_22 ADC_PCFG_CR_10 ADC_PCFG_CR_12  ]
 [c E1113 1 0 .. ]
 [n E1113 . ADC_FMT_RADJ ADC_FMT_LADJ  ]
-"73 src/../config/../Drivers/incl/pic_adc.h
-[; ;src/../config/../Drivers/incl/pic_adc.h: 73: typedef struct {
+"80 src/../config/../Drivers/incl/pic_adc.h
+[; ;src/../config/../Drivers/incl/pic_adc.h: 80: typedef struct {
 [s S99 `E1087 1 `E1096 1 `E1113 1 `uc 1 `uc 1 `uc 1 ]
 [n S99 . CKSEL_bf PCFG_bf FMT_bf CH_sel INT_enable convStart_Sel ]
 "33 src/main.c
 [; ;src/main.c: 33:     I2C_Config_S my_i2c_s = {
-[c E1132 15 14 11 8 7 6 .. ]
-[n E1132 . I2C_MODE_SLAVE_ADDR10_INTEN I2C_MODE_SLAVE_ADDR7_INTEN I2C_MODE_MASTER_FIRMWARE_CONTROLLED I2C_MODE_MASTER_HARDWARE_CONTROLLED I2C_MODE_SLAVE_ADDR10 I2C_MODE_SLAVE_ADDR7  ]
-"32 src/../config/../Drivers/incl/pic_i2c.h
-[; ;src/../config/../Drivers/incl/pic_i2c.h: 32: typedef struct {
-[s S100 `E1132 1 `uc 1 `ui 1 `ul 1 `uc 1 ]
+[c E1136 15 14 11 8 7 6 .. ]
+[n E1136 . I2C_MODE_SLAVE_ADDR10_INTEN I2C_MODE_SLAVE_ADDR7_INTEN I2C_MODE_MASTER_FIRMWARE_CONTROLLED I2C_MODE_MASTER_HARDWARE_CONTROLLED I2C_MODE_SLAVE_ADDR10 I2C_MODE_SLAVE_ADDR7  ]
+"37 src/../config/../Drivers/incl/pic_i2c.h
+[; ;src/../config/../Drivers/incl/pic_i2c.h: 37: typedef struct {
+[s S100 `E1136 1 `uc 1 `ui 1 `ul 1 `uc 1 ]
 [n S100 . I2C_mode sla7_addr sla10_addr I2C_freq I2C_Int_Enable ]
 "278 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
@@ -40,40 +40,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 "216
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"48 src/../config/../Drivers/incl/pic_i2c.h
-[; ;src/../config/../Drivers/incl/pic_i2c.h: 48: int8_t I2C_Init ( I2C_Config_S* i2ch );
+"55 src/../config/../Drivers/incl/pic_i2c.h
+[; ;src/../config/../Drivers/incl/pic_i2c.h: 55: int8_t I2C_Init ( I2C_Config_S* i2ch );
 [v _I2C_Init `(c ~T0 @X0 0 ef1`*S100 ]
-"94 src/../config/../Drivers/incl/pic_adc.h
-[; ;src/../config/../Drivers/incl/pic_adc.h: 94: int8_t ADC_Init ( ADC_Config_S * config_s_ptr ) ;
+"112 src/../config/../Drivers/incl/pic_adc.h
+[; ;src/../config/../Drivers/incl/pic_adc.h: 112: int8_t ADC_Init ( ADC_Config_S * config_s_ptr ) ;
 [v _ADC_Init `(c ~T0 @X0 0 ef1`*S99 ]
-"46 src/../config/../Drivers/incl/pic_tim1.h
-[; ;src/../config/../Drivers/incl/pic_tim1.h: 46: void TIM1_Init ( void );
+"60 src/../config/../Drivers/incl/pic_tim1.h
+[; ;src/../config/../Drivers/incl/pic_tim1.h: 60: void TIM1_Init ( void );
 [v _TIM1_Init `(v ~T0 @X0 0 ef ]
-"47
-[; ;src/../config/../Drivers/incl/pic_tim1.h: 47: int8_t DisplayInit ( void ) ;
-[v _DisplayInit `(c ~T0 @X0 0 ef ]
+"62
+[; ;src/../config/../Drivers/incl/pic_tim1.h: 62: void DisplayInit ( void ) ;
+[v _DisplayInit `(v ~T0 @X0 0 ef ]
 "454 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 454: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
 [p mainexit ]
-"151 src/../config/../Drivers/incl/../../config/pconfig.h
+"230 src/../config/../Drivers/incl/../../config/pconfig.h
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 230: extern volatile uint8_t Current_Task ;
 [v _Current_Task `Vuc ~T0 @X0 0 e ]
 "1159 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1159: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
 [v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
-"150 src/../config/../Drivers/incl/../../config/pconfig.h
+"228 src/../config/../Drivers/incl/../../config/pconfig.h
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 228: extern volatile uint8_t display_state ;
 [v _display_state `Vuc ~T0 @X0 0 e ]
-"144
+"216
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 216: extern volatile uint8_t device_state ;
 [v _device_state `Vuc ~T0 @X0 0 e ]
-"152
+"232
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 232: extern volatile uint8_t display_mode ;
 [v _display_mode `Vuc ~T0 @X0 0 e ]
 "737 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 737: extern volatile unsigned char T2CON __attribute__((address(0x012)));
 [v _T2CON `Vuc ~T0 @X0 0 e@18 ]
-"20 src/../config/../Drivers/incl/eep.h
-[; ;src/../config/../Drivers/incl/eep.h: 20: int16_t eepByteRead( uint16_t Addr );
+"31 src/../config/../Drivers/incl/eep.h
+[; ;src/../config/../Drivers/incl/eep.h: 31: int16_t eepByteRead( uint16_t Addr );
 [v _eepByteRead `(i ~T0 @X0 0 ef1`ui ]
-"145 src/../config/../Drivers/incl/../../config/pconfig.h
+"218 src/../config/../Drivers/incl/../../config/pconfig.h
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 218: extern volatile uint8_t desired_temp ;
 [v _desired_temp `Vuc ~T0 @X0 0 e ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
@@ -81,12 +86,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "532
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 532: extern volatile unsigned char PIR1 __attribute__((address(0x00C)));
 [v _PIR1 `Vuc ~T0 @X0 0 e@12 ]
-"19 src/../config/../Drivers/incl/eep.h
-[; ;src/../config/../Drivers/incl/eep.h: 19: int8_t eepByteWrite( uint8_t bval , uint16_t Addr );
+"29 src/../config/../Drivers/incl/eep.h
+[; ;src/../config/../Drivers/incl/eep.h: 29: int8_t eepByteWrite( uint8_t bval , uint16_t Addr );
 [v _eepByteWrite `(c ~T0 @X0 0 ef2`uc`ui ]
-"147 src/../config/../Drivers/incl/../../config/pconfig.h
+"222 src/../config/../Drivers/incl/../../config/pconfig.h
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 222: extern volatile uint8_t heater_state ;
 [v _heater_state `Vuc ~T0 @X0 0 e ]
-"148
+"224
+[; ;src/../config/../Drivers/incl/../../config/pconfig.h: 224: extern volatile uint8_t cooler_state ;
 [v _cooler_state `Vuc ~T0 @X0 0 e ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 54: __asm("INDF equ 00h");
@@ -268,21 +275,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"128 src/../config/../Drivers/incl/../../config/pconfig.h
+"185 src/../config/../Drivers/incl/../../config/pconfig.h
 [p x FOSC = HS ]
-"129
+"188
 [p x WDTE = ON ]
-"130
+"191
 [p x PWRTE = OFF ]
-"131
+"194
 [p x BOREN = ON ]
-"132
+"197
 [p x LVP = OFF ]
-"133
+"200
 [p x CPD = OFF ]
-"134
+"203
 [p x WRT = OFF ]
-"135
+"206
 [p x CP = OFF ]
 "7 src/main.c
 [; ;src/main.c: 7: void system_startup ( void )
@@ -304,8 +311,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18
 [; ;src/main.c: 18:     __asm("clrwdt");
 [; <" clrwdt ;# ">
-[v F1172 `S99 ~T0 @X0 1 s ]
-[i F1172
+[v F1177 `S99 ~T0 @X0 1 s ]
+[i F1177
 :U ..
 :U ..
 "22
@@ -320,14 +327,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _my_s `S99 ~T0 @X0 1 a ]
-[e = _my_s F1172 ]
-[v F1174 `S100 ~T0 @X0 1 s ]
-[i F1174
+[e = _my_s F1177 ]
+[v F1179 `S100 ~T0 @X0 1 s ]
+[i F1179
 :U ..
 :U ..
 "33
 [; ;src/main.c: 33:     I2C_Config_S my_i2c_s = {
-. `E1132 3
+. `E1136 3
 -> -> 0 `i `uc
 -> -> 0 `i `ui
 -> 100000 `ul
@@ -336,7 +343,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _my_i2c_s `S100 ~T0 @X0 1 a ]
-[e = _my_i2c_s F1174 ]
+[e = _my_i2c_s F1179 ]
 "43
 [; ;src/main.c: 43:     PORTC &= ~ ( ( 1 << 5 ) | ( 1 << 2 ) );
 [e =& _PORTC -> ~ | << -> 1 `i -> 5 `i << -> 1 `i -> 2 `i `Vuc ]
@@ -500,21 +507,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 "131
 [; ;src/main.c: 131:         }
 }
-[e :U 108 ]
-[e :U 107 ]
+[e $U 111  ]
 "132
-[; ;src/main.c: 132:        __asm("clrwdt");
-[; <" clrwdt ;# ">
+[; ;src/main.c: 132:         else if ( Current_Task == 3 )
+[e :U 108 ]
+[e $ ! == -> _Current_Task `i -> 3 `i 112  ]
 "133
-[; ;src/main.c: 133:     }
+[; ;src/main.c: 133:         {
+{
+"134
+[; ;src/main.c: 134:              eepByteWrite( desired_temp , 0x0000 );
+[e ( _eepByteWrite (2 , _desired_temp -> -> 0 `i `ui ]
+"135
+[; ;src/main.c: 135:              Current_Task = 0 ;
+[e = _Current_Task -> -> 0 `i `uc ]
+"136
+[; ;src/main.c: 136:         }
+}
+[e :U 112 ]
+[e :U 111 ]
+[e :U 107 ]
+"137
+[; ;src/main.c: 137:        __asm("clrwdt");
+[; <" clrwdt ;# ">
+"138
+[; ;src/main.c: 138:     }
 }
 [e :U 103 ]
 [e $U 104  ]
 [e :U 105 ]
-"134
-[; ;src/main.c: 134:     return;
+"139
+[; ;src/main.c: 139:     return;
 [e $UE 102  ]
-"135
-[; ;src/main.c: 135: }
+"140
+[; ;src/main.c: 140: }
 [e :UE 102 ]
 }

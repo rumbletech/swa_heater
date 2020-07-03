@@ -16,7 +16,7 @@
 
 
 # 1 "src/../config/pconfig.h" 1
-# 21 "src/../config/pconfig.h"
+# 24 "src/../config/pconfig.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1726,7 +1726,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 21 "src/../config/pconfig.h" 2
+# 24 "src/../config/pconfig.h" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
@@ -1862,7 +1862,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 23 "src/../config/pconfig.h" 2
+# 26 "src/../config/pconfig.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -1955,7 +1955,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 24 "src/../config/pconfig.h" 2
+# 27 "src/../config/pconfig.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\string.h" 3
@@ -1988,13 +1988,15 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 25 "src/../config/pconfig.h" 2
+# 28 "src/../config/pconfig.h" 2
 
 
 # 1 "src/../config/../Drivers/incl/pic_adc.h" 1
-# 16 "src/../config/../Drivers/incl/pic_adc.h"
+# 21 "src/../config/../Drivers/incl/pic_adc.h"
 # 1 "src/../config/../Drivers/incl/../../config/pconfig.h" 1
-# 16 "src/../config/../Drivers/incl/pic_adc.h" 2
+# 21 "src/../config/../Drivers/incl/pic_adc.h" 2
+
+
 
 
 
@@ -2068,32 +2070,36 @@ typedef struct {
    uint8_t convStart_Sel ;
 
 } ADC_Config_S , * ADC_Config_SP ;
+# 104 "src/../config/../Drivers/incl/pic_adc.h"
+uint8_t ADC_GetFlag ( void );
 
+void ADC_ClearFlag ( void );
 
+void ADC_EnableINT ( void );
 
-
+void ADC_DisableINT( void );
 
 int8_t ADC_Init ( ADC_Config_S * config_s_ptr ) ;
-uint16_t ADC_StartConv_B ( void );
-void ADC_StartConv_NB( void );
-# 27 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
 
-# 1 "src/../config/../Drivers/incl/Seg_Dis.h" 1
-# 28 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
+uint16_t ADC_StartConv_B ( void );
+
+void ADC_StartConv_NB( void );
+# 30 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
 
 # 1 "src/../config/../Drivers/incl/pic_tim1.h" 1
-# 21 "src/../config/../Drivers/incl/pic_tim1.h"
+# 28 "src/../config/../Drivers/incl/pic_tim1.h"
 # 1 "src/../config/../Drivers/incl/../../config/pconfig.h" 1
-# 21 "src/../config/../Drivers/incl/pic_tim1.h" 2
-# 46 "src/../config/../Drivers/incl/pic_tim1.h"
+# 28 "src/../config/../Drivers/incl/pic_tim1.h" 2
+# 60 "src/../config/../Drivers/incl/pic_tim1.h"
 void TIM1_Init ( void );
-int8_t DisplayInit ( void ) ;
-# 29 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
+
+void DisplayInit ( void ) ;
+# 31 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
 
 # 1 "src/../config/../Drivers/incl/pic_i2c.h" 1
-# 17 "src/../config/../Drivers/incl/pic_i2c.h"
+# 20 "src/../config/../Drivers/incl/pic_i2c.h"
 # 1 "src/../config/../Drivers/incl/../../config/pconfig.h" 1
-# 17 "src/../config/../Drivers/incl/pic_i2c.h" 2
+# 20 "src/../config/../Drivers/incl/pic_i2c.h" 2
 
 
 
@@ -2108,6 +2114,8 @@ typedef enum
 
 
 } I2C_MODE_ET ;
+
+
 
 typedef struct {
 
@@ -2125,19 +2133,31 @@ typedef struct {
 } I2C_Config_S , * I2C_Config_SP ;
 
 
+
+
 int8_t I2C_Init ( I2C_Config_S* i2ch );
+
+void I2C_Halt ( void );
+
 void I2C_Start ( void );
+
 void I2C_Stop ( void );
+
 void I2C_Restart ( void );
+
 int8_t I2C_Transmit( uint8_t bval );
+
 uint8_t I2C_Receive_ACK ( void );
+
 uint8_t I2C_Receive_NACK ( void );
-# 30 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
+# 32 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
 
 # 1 "src/../config/../Drivers/incl/eep.h" 1
-# 13 "src/../config/../Drivers/incl/eep.h"
+# 21 "src/../config/../Drivers/incl/eep.h"
 # 1 "src/../config/../Drivers/incl/../../config/pconfig.h" 1
-# 13 "src/../config/../Drivers/incl/eep.h" 2
+# 21 "src/../config/../Drivers/incl/eep.h" 2
+
+
 
 
 
@@ -2145,38 +2165,49 @@ uint8_t I2C_Receive_NACK ( void );
 
 
 int8_t eepByteWrite( uint8_t bval , uint16_t Addr );
+
 int16_t eepByteRead( uint16_t Addr );
-
-
-
-# 1 "src/../config/../Drivers/incl/../../config/pconfig.h" 1
-# 23 "src/../config/../Drivers/incl/eep.h" 2
-# 31 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
-# 128 "src/../config/../Drivers/incl/../../config/pconfig.h"
+# 33 "src/../config/../Drivers/incl/../../config/pconfig.h" 2
+# 185 "src/../config/../Drivers/incl/../../config/pconfig.h"
 #pragma config FOSC = HS
+
+
 #pragma config WDTE = ON
+
+
 #pragma config PWRTE = OFF
+
+
 #pragma config BOREN = ON
+
+
 #pragma config LVP = OFF
+
+
 #pragma config CPD = OFF
+
+
 #pragma config WRT = OFF
+
+
 #pragma config CP = OFF
-
-
-
-
-
-
-
-
+# 216 "src/../config/../Drivers/incl/../../config/pconfig.h"
 extern volatile uint8_t device_state ;
+
 extern volatile uint8_t desired_temp ;
+
 extern volatile uint16_t average_temp ;
+
 extern volatile uint8_t heater_state ;
+
 extern volatile uint8_t cooler_state ;
+
 extern volatile uint8_t Seg_Val ;
+
 extern volatile uint8_t display_state ;
+
 extern volatile uint8_t Current_Task ;
+
 extern volatile uint8_t display_mode ;
 # 9 "src/pic_int.c" 2
 
@@ -2257,6 +2288,7 @@ void TIMER1_IRQ_Handler( void )
     static uint8_t sig_blink_count = 0 ;
     static uint8_t sig_blink_toggle = 0 ;
     static uint8_t temp_enter_counter = 0 ;
+    static uint8_t tst ;
 
 
 
@@ -2297,10 +2329,11 @@ void TIMER1_IRQ_Handler( void )
              if ( display_mode == 1 )
             {
                 display_mode = 2;temp_enter_counter = 0 ;
+                tst = desired_temp;
             }
             else if ( display_mode == 2 && !(desired_temp + 5 > 75 ) )
             {
-                desired_temp += 5 ;
+                tst += 5 ;
                 temp_enter_counter = 0 ;
             }
 
@@ -2318,11 +2351,12 @@ void TIMER1_IRQ_Handler( void )
             if ( display_mode == 1 )
             {
                 display_mode = 2;temp_enter_counter = 0 ;
+                tst = desired_temp ;
 
             }
             else if ( display_mode == 2 && !(desired_temp - 5 < 35 ) )
             {
-                desired_temp -= 5 ;
+                tst -= 5 ;
                 temp_enter_counter = 0 ;
             }
         }
@@ -2335,6 +2369,8 @@ void TIMER1_IRQ_Handler( void )
        if ( ((++temp_enter_counter) >= 250 ) && display_mode == 2 )
     {
         display_mode = 1 ;
+        Current_Task = 3 ;
+        desired_temp = tst ;
         if ( device_state == 1 )
         {
             display_state = 1 ;
@@ -2349,7 +2385,7 @@ void TIMER1_IRQ_Handler( void )
             WriteSegVal( average_temp );
         }
         else if ( display_mode == 2 ){
-         WriteSegVal( desired_temp );
+         WriteSegVal( tst );
         }
     }
 
@@ -2416,11 +2452,11 @@ void ADC_IRQ_Handler ( void )
 
             PORTC |= ( 1 << 2 );cooler_state = 1;
         }
-    else if ( average_temp > desired_temp && ( average_temp - desired_temp ) > 5 && heater_state == 1 )
+    else if ( average_temp > desired_temp && ( average_temp - desired_temp ) > 1 && heater_state == 1 )
     {
         PORTC &= ~( 1 << 5 );heater_state = 0;
     }
-    else if ( average_temp < desired_temp && ( desired_temp - average_temp) >5 && cooler_state == 1)
+    else if ( average_temp < desired_temp && ( desired_temp - average_temp) > 1 && cooler_state == 1)
     {
        PORTC &= ~( 1 << 2 );cooler_state = 0;
 
@@ -2487,5 +2523,5 @@ void __attribute__((picinterrupt(("")))) ISR( void )
         PIR1&= ~( 1 << 0x6 );
         ADC_IRQ_Handler();
     }
-# 326 "src/pic_int.c"
+# 331 "src/pic_int.c"
 }

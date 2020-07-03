@@ -129,6 +129,11 @@ void main(void) {
             
             
         }
+        else if ( Current_Task == WRITE_EEP )
+        {
+             eepByteWrite( desired_temp , 0x0000 );
+             Current_Task = 0 ;
+        }
        CLRWDT();
     }
     return;
